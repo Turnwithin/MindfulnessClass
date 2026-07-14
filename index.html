@@ -1,0 +1,1360 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="內在轉化教練學苑｜正念認知生活課程第二階段第一至第五週學習手冊與音檔練習入口。">
+  <title>內在轉化教練學苑｜正念認知生活・音檔練習入口</title>
+  <style>
+    :root {
+      --paper: #f6f3ec;
+      --paper-deep: #ece8de;
+      --card: rgba(255, 255, 255, 0.75);
+      --ink: #21333b;
+      --muted: #647278;
+      --line: rgba(33, 51, 59, 0.14);
+      --sage: #879b8b;
+      --sage-soft: #dfe7df;
+      --indigo: #273d50;
+      --clay: #b47d68;
+      --gold: #c6a66a;
+      --coral: #b86f65;
+      --week-gray: #9ca6a9;
+      --surface-hero: var(--paper);
+      --surface-browse: var(--sage-soft);
+      --surface-week-nav: var(--paper);
+      --surface-week-deep: var(--paper-deep);
+      --surface-week-light: var(--paper);
+      --shadow: 0 18px 50px rgba(33, 51, 59, 0.09);
+      --radius-lg: 30px;
+      --radius-md: 20px;
+      --radius-sm: 13px;
+      --content: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 4% 6%, rgba(198, 166, 106, 0.16), transparent 26rem),
+        radial-gradient(circle at 96% 28%, rgba(135, 155, 139, 0.18), transparent 30rem),
+        var(--paper);
+      font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 100;
+      padding: 9px 14px;
+      background: #fff;
+      border-radius: 8px;
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid rgba(33, 51, 59, 0.08);
+      background: rgba(246, 243, 236, 0.88);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      width: min(calc(100% - 36px), var(--content));
+      min-height: 68px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--indigo);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 1px;
+      line-height: 1.25;
+    }
+
+    .brand-name {
+      font-size: 15px;
+      font-weight: 750;
+      letter-spacing: 0.055em;
+    }
+
+    .brand-en {
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.035em;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 38px;
+      flex: 0 0 auto;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar { display: none; }
+
+    .nav-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 160ms ease, color 160ms ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--indigo);
+      background: rgba(255, 255, 255, 0.72);
+      outline: none;
+    }
+
+    main { overflow: hidden; }
+
+    .container {
+      width: min(calc(100% - 40px), var(--content));
+      margin-inline: auto;
+    }
+
+    .hero {
+      min-height: 650px;
+      display: grid;
+      grid-template-columns: minmax(0, 760px);
+      align-items: center;
+      padding-block: 92px 84px;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -3;
+      inset: 0 calc(50% - 50vw);
+      background: var(--surface-hero);
+      pointer-events: none;
+    }
+
+    .flow-line {
+      position: absolute;
+      z-index: -1;
+      width: 760px;
+      height: 230px;
+      border-top: 1.5px solid rgba(198, 166, 106, 0.58);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .flow-line-one {
+      top: 34px;
+      right: -350px;
+      transform: rotate(9deg);
+    }
+
+    .flow-line-two {
+      bottom: -85px;
+      left: -260px;
+      border-color: rgba(135, 155, 139, 0.36);
+      transform: rotate(-7deg);
+    }
+
+    .botanical {
+      position: absolute;
+      z-index: 0;
+      width: 190px;
+      height: 220px;
+      opacity: 0.22;
+      pointer-events: none;
+      transform: rotate(12deg);
+    }
+
+    .botanical .stem {
+      position: absolute;
+      left: 92px;
+      bottom: 5px;
+      width: 2px;
+      height: 205px;
+      border-radius: 999px;
+      background: var(--sage);
+      transform: rotate(-27deg);
+      transform-origin: bottom;
+    }
+
+    .botanical .leaf {
+      position: absolute;
+      width: 58px;
+      height: 24px;
+      border-radius: 100% 0 100% 0;
+      background: linear-gradient(135deg, rgba(111, 139, 123, 0.9), rgba(170, 188, 174, 0.58));
+      transform-origin: 100% 50%;
+    }
+
+    .botanical .leaf:nth-child(2) { left: 31px; top: 146px; transform: rotate(29deg); }
+    .botanical .leaf:nth-child(3) { left: 50px; top: 108px; transform: rotate(14deg) scale(0.92); }
+    .botanical .leaf:nth-child(4) { left: 75px; top: 69px; transform: rotate(-2deg) scale(0.8); }
+    .botanical .leaf:nth-child(5) { left: 90px; top: 135px; transform: scaleX(-1) rotate(30deg); }
+    .botanical .leaf:nth-child(6) { left: 105px; top: 96px; transform: scaleX(-1) rotate(15deg) scale(0.9); }
+    .botanical .leaf:nth-child(7) { left: 116px; top: 57px; transform: scaleX(-1) rotate(3deg) scale(0.76); }
+
+    .hero-botanical {
+      top: 38px;
+      right: -48px;
+    }
+
+    .sparkle {
+      position: absolute;
+      z-index: 0;
+      width: 42px;
+      height: 42px;
+      opacity: 0.58;
+      pointer-events: none;
+    }
+
+    .sparkle::before,
+    .sparkle::after {
+      content: "";
+      position: absolute;
+      inset: 50% auto auto 50%;
+      background: var(--gold);
+      transform: translate(-50%, -50%);
+    }
+
+    .sparkle::before { width: 42px; height: 1px; }
+    .sparkle::after { width: 1px; height: 42px; }
+    .hero-sparkle { top: 130px; right: 24%; }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--clay);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: 28px;
+      color: var(--indigo);
+      font-family: "Songti TC", "Noto Serif TC", "PMingLiU", serif;
+      font-size: clamp(48px, 7vw, 82px);
+      font-weight: 600;
+      letter-spacing: -0.045em;
+      line-height: 1.08;
+    }
+
+    h1 span {
+      display: block;
+      margin-top: 14px;
+      color: var(--sage);
+      font-family: "PingFang TC", "Noto Sans TC", sans-serif;
+      font-size: clamp(19px, 2.3vw, 27px);
+      font-weight: 500;
+      letter-spacing: 0.11em;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(17px, 1.7vw, 20px);
+    }
+
+    .hero-copy p { margin-bottom: 8px; }
+
+    .hero-actions,
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 11px 20px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: 650;
+      line-height: 1.4;
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    .button:focus-visible {
+      outline: 3px solid rgba(180, 125, 104, 0.32);
+      outline-offset: 3px;
+    }
+
+    .button-primary {
+      color: #fff;
+      background: var(--indigo);
+      box-shadow: 0 12px 30px rgba(39, 61, 80, 0.18);
+    }
+
+    .button-secondary {
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .button-audio::before {
+      content: "▶";
+      font-size: 11px;
+    }
+
+    .section { padding-block: 96px; }
+
+    .section-soft {
+      background: rgba(223, 231, 223, 0.45);
+      border-block: 1px solid rgba(33, 51, 59, 0.07);
+    }
+
+    #quick {
+      background: var(--surface-browse);
+      border-block-color: rgba(180, 125, 104, 0.1);
+    }
+
+    #weeks { background: var(--surface-week-nav); }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2,
+    .week-intro h2 {
+      margin-bottom: 18px;
+      color: var(--indigo);
+      font-family: "Songti TC", "Noto Serif TC", "PMingLiU", serif;
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 600;
+      line-height: 1.28;
+    }
+
+    .section-heading p,
+    .week-intro > p { color: var(--muted); }
+
+    .reminder-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .reminder-card,
+    .quick-card,
+    .audio-card,
+    .manual-card {
+      border: 1px solid rgba(33, 51, 59, 0.1);
+      background: var(--card);
+      box-shadow: 0 12px 36px rgba(33, 51, 59, 0.055);
+    }
+
+    .reminder-card {
+      min-height: 190px;
+      padding: 27px;
+      border-radius: var(--radius-md);
+    }
+
+    .reminder-number {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 17px;
+      display: grid;
+      place-items: center;
+      color: var(--indigo);
+      background: var(--sage-soft);
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .reminder-card h3,
+    .quick-card h3,
+    .audio-card h3 { margin-bottom: 9px; font-size: 20px; }
+
+    .reminder-card p,
+    .quick-card p { margin-bottom: 0; color: var(--muted); font-size: 15px; }
+
+    .manual-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+      padding: clamp(30px, 6vw, 62px);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(120deg, rgba(255,255,255,0.83), rgba(223,231,223,0.72));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .manual-card::before,
+    .manual-card::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      width: 560px;
+      height: 165px;
+      border-top: 1.5px solid rgba(198, 166, 106, 0.55);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .manual-card::before { top: -78px; right: -240px; transform: rotate(8deg); }
+    .manual-card::after { bottom: -145px; left: -190px; border-color: rgba(135, 155, 139, 0.4); transform: rotate(-7deg); }
+    .manual-card > * { position: relative; z-index: 1; }
+
+    .manual-card h2 {
+      margin-bottom: 12px;
+      font-family: "Songti TC", "Noto Serif TC", serif;
+      font-size: clamp(30px, 4vw, 45px);
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .manual-card p { max-width: 720px; margin-bottom: 0; color: var(--muted); }
+
+    .manual-symbol {
+      width: 116px;
+      aspect-ratio: 0.78;
+      display: grid;
+      place-items: center;
+      border: 1.5px solid var(--sage);
+      border-radius: 8px 24px 8px 8px;
+      color: var(--sage);
+      font-family: "Songti TC", serif;
+      font-size: 34px;
+      transform: rotate(2deg);
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .quick-card {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      border-radius: var(--radius-md);
+    }
+
+    .quick-time,
+    .time-chip,
+    .week-label {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .quick-time {
+      margin-bottom: 22px;
+      padding: 5px 10px;
+      color: var(--clay);
+      background: rgba(180, 125, 104, 0.11);
+    }
+
+    .quick-card .button {
+      min-height: 42px;
+      margin-top: auto;
+      align-self: flex-start;
+      padding: 8px 0 0;
+      color: var(--indigo);
+      font-size: 14px;
+    }
+
+    .quick-card .button::after { content: " →"; }
+
+    .week-section { padding-block: 110px; }
+    .week-1,
+    .week-3,
+    .week-5 { background: var(--surface-week-deep); }
+    .week-2,
+    .week-4 { background: var(--surface-week-light); }
+    .week-section + .week-section { border-top: 1px solid var(--line); }
+
+    .week-layout {
+      display: grid;
+      grid-template-columns: minmax(270px, 0.78fr) minmax(0, 1.5fr);
+      gap: clamp(50px, 8vw, 105px);
+      align-items: start;
+    }
+
+    .week-intro {
+      position: sticky;
+      top: 108px;
+    }
+
+    .week-label {
+      margin-bottom: 18px;
+      padding: 5px 12px;
+      color: #fff;
+      background: var(--sage);
+    }
+
+    .week-intro h2 { font-size: clamp(34px, 4vw, 48px); }
+
+    .focus-box {
+      margin-top: 30px;
+      padding: 22px;
+      border-left: 3px solid var(--sage);
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    .focus-box h3 { margin-bottom: 10px; font-size: 16px; }
+
+    .focus-box ul {
+      margin: 0;
+      padding-left: 1.2em;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .focus-box li + li { margin-top: 7px; }
+
+    .audio-list { display: grid; gap: 22px; }
+
+    .audio-card {
+      padding: clamp(26px, 4vw, 42px);
+      border-radius: var(--radius-lg);
+    }
+
+    .audio-topline {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .audio-kicker {
+      margin-bottom: 7px;
+      color: var(--clay);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: 0.13em;
+    }
+
+    .audio-card h3 {
+      margin: 0;
+      color: var(--indigo);
+      font-size: clamp(23px, 2.7vw, 31px);
+      line-height: 1.4;
+    }
+
+    .time-chip {
+      flex: 0 0 auto;
+      padding: 6px 12px;
+      color: var(--indigo);
+      background: var(--sage-soft);
+      white-space: nowrap;
+    }
+
+    .suitable {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .suitable strong { color: var(--ink); }
+
+    blockquote {
+      margin: 24px 0;
+      padding: 19px 22px;
+      border-left: 3px solid var(--clay);
+      color: var(--indigo);
+      background: rgba(180, 125, 104, 0.065);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.8;
+    }
+
+    .audio-description {
+      margin-bottom: 0;
+      color: #44575f;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .week-2 .week-label { background: #6f8790; }
+    .week-2 .focus-box { border-color: #6f8790; }
+    .week-3 .week-label { background: var(--clay); }
+    .week-3 .focus-box { border-color: var(--clay); }
+    .week-4 .week-label { background: var(--indigo); }
+    .week-4 .focus-box { border-color: var(--indigo); }
+    .week-5 .week-label { color: var(--indigo); background: var(--gold); }
+    .week-5 .focus-box { border-color: var(--gold); }
+
+    .overview {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .overview-group + .overview-group { border-top: 1px solid var(--line); }
+
+    .overview-group-title {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      min-height: 46px;
+      padding: 10px 22px 10px 18px;
+      color: var(--indigo);
+      background: var(--paper);
+      border-left: 4px solid var(--gold);
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+      font-weight: 750;
+      letter-spacing: 0.04em;
+    }
+
+    .overview-group-title span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .overview-group .overview-row { background: rgba(255, 255, 255, 0.9); }
+
+    .overview-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 115px 170px;
+      align-items: center;
+      gap: 18px;
+      min-height: 86px;
+      padding: 13px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .overview-group .overview-row:last-child { border-bottom: 0; }
+    .overview-copy { min-width: 0; }
+    .overview-name { display: block; font-weight: 650; }
+    .overview-intro {
+      display: block;
+      margin-top: 3px;
+      color: rgba(100, 114, 120, 0.78);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.55;
+    }
+    .overview-time { color: var(--coral); font-size: 14px; font-weight: 750; }
+    .overview-row .button { min-height: 40px; padding: 8px 14px; font-size: 14px; }
+
+    .closing {
+      padding-block: 110px;
+      color: #fff;
+      background: var(--indigo);
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .closing::before,
+    .closing::after {
+      content: "";
+      position: absolute;
+      width: 760px;
+      height: 220px;
+      border-top: 1px solid rgba(198, 166, 106, 0.45);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .closing::before { top: 22px; right: -360px; transform: rotate(8deg); }
+    .closing::after { bottom: -170px; left: -250px; border-color: rgba(223, 231, 223, 0.22); transform: rotate(-9deg); }
+    .closing .container { position: relative; z-index: 1; }
+
+    .footer-logo {
+      width: 46px;
+      height: auto;
+      margin-bottom: 10px;
+      filter: saturate(0.8) brightness(1.75);
+      opacity: 0.85;
+    }
+
+    .closing .eyebrow { color: #cdd9cf; }
+
+    .closing h2 {
+      margin-bottom: 22px;
+      font-family: "Songti TC", "Noto Serif TC", serif;
+      font-size: clamp(40px, 5vw, 62px);
+      font-weight: 600;
+    }
+
+    .closing p {
+      max-width: 720px;
+      margin: 0 auto 12px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .closing .button { margin-top: 24px; color: var(--indigo); background: #fff; }
+
+    footer {
+      padding: 34px 20px 38px;
+      color: var(--muted);
+      background: #1f3038;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .footer-academy {
+      margin-bottom: 5px;
+      color: rgba(255, 255, 255, 0.82);
+      font-weight: 650;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-course {
+      margin-bottom: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .copyright {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 70px; }
+      .quick-grid { grid-template-columns: repeat(2, 1fr); }
+      .week-layout { grid-template-columns: 1fr; }
+      .week-intro { position: static; }
+      .reminder-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 720px) {
+      body { font-size: 16px; }
+      .container { width: min(calc(100% - 28px), var(--content)); }
+      .nav {
+        width: min(calc(100% - 24px), var(--content));
+        flex-wrap: wrap;
+        gap: 6px 12px;
+        padding-block: 8px;
+      }
+      .brand-en { display: none; }
+      .brand-name { font-size: 13px; }
+      .brand-logo { width: 31px; height: 33px; }
+      .hero-botanical { right: -92px; opacity: 0.15; }
+      .hero-sparkle { display: none; }
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+        padding-top: 3px;
+        border-top: 1px solid rgba(33, 51, 59, 0.07);
+      }
+      .nav-links a {
+        flex: 1 1 0;
+        padding: 5px 4px;
+        font-size: 13px;
+        text-align: center;
+      }
+      .section, .week-section { padding-block: 72px; }
+      .manual-card { grid-template-columns: 1fr; }
+      .manual-symbol { display: none; }
+      .quick-grid { grid-template-columns: 1fr; }
+      .quick-card { min-height: 220px; }
+      .audio-topline { display: block; }
+      .time-chip { margin-top: 13px; }
+      .overview-row {
+        grid-template-columns: minmax(0, 1fr) 72px auto;
+        gap: 10px;
+        padding: 15px;
+      }
+      .overview-copy { grid-column: 1; grid-row: 1; }
+      .overview-time { grid-column: 2; grid-row: 1; }
+      .overview-row .button { grid-column: 3; grid-row: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="主要導覽">
+      <a class="brand" href="#top">
+        <img class="brand-logo" src="內在轉化教練學苑/內在轉化學苑LOGO_藍.png" alt="">
+        <span class="brand-copy">
+          <span class="brand-name">內在轉化教練學苑</span>
+          <span class="brand-en" lang="en">Turn Within Coaching Academy</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#quick">音檔快速瀏覽</a>
+        <a href="#weeks">每週導航</a>
+        <a class="pending-link" href="" data-link-key="learning-manual" aria-disabled="true">學習手冊</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="container hero" id="top">
+      <div class="flow-line flow-line-one" aria-hidden="true"></div>
+      <div class="flow-line flow-line-two" aria-hidden="true"></div>
+      <div class="botanical hero-botanical" aria-hidden="true">
+        <span class="stem"></span>
+        <span class="leaf"></span><span class="leaf"></span><span class="leaf"></span>
+        <span class="leaf"></span><span class="leaf"></span><span class="leaf"></span>
+      </div>
+      <div class="sparkle hero-sparkle" aria-hidden="true"></div>
+      <div>
+        <p class="eyebrow">Mindfulness Practice</p>
+        <h1>正念認知生活<span>音檔練習入口</span></h1>
+        <div class="hero-copy">
+          <p>有些日子，我們有半小時可以坐下來；有些日子，只能留給自己三分鐘。</p>
+          <p>都沒有關係。</p>
+          <p>可以看看此刻有多少時間，選一段剛剛好的音檔。</p>
+          <p>讓注意力從忙碌的頭腦，回到呼吸、身體，以及正在發生的這一刻。</p>
+          <p>不需要做到完美，只需一次次的回到覺察就好</p>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#quick">快速瀏覽音檔</a>
+          <a class="button button-secondary" href="#weeks">查看每週導航</a>
+          <a class="button button-secondary pending-link" href="" data-link-key="learning-manual" aria-disabled="true">瀏覽學習手冊</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="quick" aria-labelledby="overview-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Quick access</p>
+          <h2 id="overview-title">音檔快速瀏覽</h2>
+          <p>可以先從練習名稱與時間找到今天想做的練習。</p>
+        </div>
+        <div class="overview">
+          <section class="overview-group overview-group-short" aria-labelledby="short-practice-title">
+            <div class="overview-group-title" id="short-practice-title">短修習 <span>15 分鐘內</span></div>
+            <div class="overview-row">
+              <span class="overview-copy"><span class="overview-name">三步驟呼吸空間</span><span class="overview-intro">用三個步驟，幫助自己快速轉換、回到當下。</span></span>
+              <span class="overview-time">約 3 分鐘</span>
+              <a class="button button-secondary pending-link" href="" data-link-key="three-step-breathing-space" aria-disabled="true">播放音檔</a>
+            </div>
+            <div class="overview-row">
+              <span class="overview-copy"><span class="overview-name">靜坐觀呼吸練習</span><span class="overview-intro">把心安放在呼吸上，分心時再溫柔回來。</span></span>
+              <span class="overview-time">約 9 分鐘</span>
+              <a class="button button-secondary pending-link" href="" data-link-key="sitting-breath" aria-disabled="true">播放音檔</a>
+            </div>
+          </section>
+
+          <section class="overview-group overview-group-long" aria-labelledby="long-practice-title">
+            <div class="overview-group-title" id="long-practice-title">長修習 <span>15–40 分鐘</span></div>
+            <div class="overview-row">
+              <span class="overview-copy"><span class="overview-name">靜坐呼吸＋身體掃描</span><span class="overview-intro">從呼吸擴展到全身，培養看見心散亂的覺知。</span></span>
+              <span class="overview-time">約 18 分鐘</span>
+              <a class="button button-secondary pending-link" href="" data-link-key="sitting-breath-body" aria-disabled="true">播放音檔</a>
+            </div>
+            <div class="overview-row">
+              <span class="overview-copy"><span class="overview-name">身體掃描練習</span><span class="overview-intro">從思考回到感知，逐步聽見身體此刻的訊息。</span></span>
+              <span class="overview-time">約 31 分鐘</span>
+              <a class="button button-secondary pending-link" href="" data-link-key="body-scan-1" aria-disabled="true">播放音檔</a>
+            </div>
+            <div class="overview-row">
+              <span class="overview-copy"><span class="overview-name">身體掃描練習二</span><span class="overview-intro">延續身體覺察，友善看見身心每一刻的變化。</span></span>
+              <span class="overview-time">約 29 分鐘</span>
+              <a class="button button-secondary pending-link" href="" data-link-key="body-scan-2" aria-disabled="true">播放音檔</a>
+            </div>
+            <div class="overview-row">
+              <span class="overview-copy"><span class="overview-name">無揀擇覺察－長靜坐</span><span class="overview-intro">敞開接收聲音、念頭與身體經驗，不刻意挑選。</span></span>
+              <span class="overview-time">約 30 分鐘</span>
+              <a class="button button-secondary pending-link" href="" data-link-key="open-awareness-long-sit" aria-disabled="true">播放音檔</a>
+            </div>
+          </section>
+
+          <section class="overview-group overview-group-special" aria-labelledby="special-practice-title">
+            <div class="overview-group-title" id="special-practice-title">特殊情境 <span>依當下需要選擇</span></div>
+            <div class="overview-row">
+              <span class="overview-copy"><span class="overview-name">三指感謝練習</span><span class="overview-intro">在日常裡停一下，記得那些值得感謝與欣賞的事。</span></span>
+              <span class="overview-time">約 7 分鐘</span>
+              <a class="button button-secondary pending-link" href="" data-link-key="three-finger-gratitude" aria-disabled="true">播放音檔</a>
+            </div>
+            <div class="overview-row">
+              <span class="overview-copy"><span class="overview-name">站立伸展及呼吸</span><span class="overview-intro">在緩慢伸展中，探索身體的界線與動態安定。</span></span>
+              <span class="overview-time">約 23 分鐘</span>
+              <a class="button button-secondary pending-link" href="" data-link-key="standing-stretch" aria-disabled="true">播放音檔</a>
+            </div>
+            <div class="overview-row">
+              <span class="overview-copy"><span class="overview-name">三步驟呼吸空間（額外引導版）</span><span class="overview-intro">在壓力升高、持續失衡或遇到困難時，以命名與標記先支持自己。</span></span>
+              <span class="overview-time">約 9 分鐘</span>
+              <a class="button button-secondary pending-link" href="" data-link-key="three-step-breathing-space-guided" aria-disabled="true">播放音檔</a>
+            </div>
+            <div class="overview-row">
+              <span class="overview-copy"><span class="overview-name">與困難共處（艱辛禪）</span><span class="overview-intro">在可承受的範圍內，以容許、好奇與友善靠近困難。</span></span>
+              <span class="overview-time">約 26 分鐘</span>
+              <a class="button button-secondary pending-link" href="" data-link-key="difficulties-practice" aria-disabled="true">播放音檔</a>
+            </div>
+            <div class="overview-row">
+              <span class="overview-copy"><span class="overview-name">友善修習（慈心禪）</span><span class="overview-intro">讓祝願流向他人與自己，培養能調和排斥的友善品質。</span></span>
+              <span class="overview-time">約 14 分鐘</span>
+              <a class="button button-secondary pending-link" href="" data-link-key="loving-kindness-practice" aria-disabled="true">播放音檔</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="weeks" aria-labelledby="weeks-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Explore by week</p>
+          <h2 id="weeks-title">每週導航</h2>
+          <p>課程共有八週，目前先整理到第五週。你可以依照進度回到每週主題，也可以直接前往此刻最想複習的一週。</p>
+        </div>
+        <div class="quick-grid week-nav-grid">
+          <article class="quick-card">
+            <span class="quick-time">第一週</span>
+            <h3>從自動導航中覺醒</h3>
+            <p>從日常感官與身體開始，讓被忽略的經驗慢慢變清楚。</p>
+            <a class="button" href="#week-1">前往第一週</a>
+          </article>
+          <article class="quick-card">
+            <span class="quick-time">第二週</span>
+            <h3>另一種存在方式：身心同在</h3>
+            <p>透過呼吸與身體感覺，把自己定錨在正在發生的這一刻。</p>
+            <a class="button" href="#week-2">前往第二週</a>
+          </article>
+          <article class="quick-card">
+            <span class="quick-time">第三週</span>
+            <h3>匯聚散亂的心</h3>
+            <p>讓呼吸與身體成為安住之所，也讓注意力有一條回來的路。</p>
+            <a class="button" href="#week-3">前往第三週</a>
+          </article>
+          <article class="quick-card">
+            <span class="quick-time">第四週</span>
+            <h3>識別反應性</h3>
+            <p>認出反應正在發生，讓刺激與回應之間多一點選擇空間。</p>
+            <a class="button" href="#week-4">前往第四週</a>
+          </article>
+          <article class="quick-card">
+            <span class="quick-time">第五週</span>
+            <h3>容許並如其所是</h3>
+            <p>把困難放進覺知裡，以容許、好奇與友善靠近一點。</p>
+            <a class="button" href="#week-5">前往第五週</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="week-section week-1" id="week-1" aria-labelledby="week-1-title">
+      <div class="container week-layout">
+        <div class="week-intro">
+          <span class="week-label">第一週</span>
+          <h2 id="week-1-title">從自動導航中覺醒</h2>
+          <p>我們很容易一邊生活，一邊被思緒帶走：吃飯時想著工作，走路時趕著下一件事，身體明明很累，頭腦卻沒有發現。</p>
+          <p>第一週從日常感官與身體開始，練習踏出自動導航。當我們願意把注意力帶回正在發生的經驗，平常被忽略的細節，也會一點一點變得清楚。</p>
+          <div class="focus-box">
+            <h3>本週練習重點</h3>
+            <ul>
+              <li>透過身體掃描，重新連結身體各部位的感覺。</li>
+              <li>用感謝練習，留意生活中容易被視為理所當然的美好。</li>
+              <li>不批判此刻的經驗，不急著要求自己一定要有感覺。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="audio-list">
+          <article class="audio-card">
+            <div class="audio-topline">
+              <div>
+                <p class="audio-kicker">音檔 01</p>
+                <h3>三指感謝練習</h3>
+              </div>
+              <span class="time-chip">約 7 分鐘</span>
+            </div>
+            <p class="suitable"><strong>適合時機：</strong>一天開始前、睡前，或想讓自己停下來回望生活時。</p>
+            <blockquote>「刻意地、有意識地，每一天好好品味那些值得欣賞、感謝的東西，讓它們留下來。」</blockquote>
+            <p class="audio-description">透過手指作為提醒，想起此刻值得感謝與欣賞的人、事、物。練習不只是在腦中列出答案，也邀請自己停留一下，感受感謝在身體裡帶來的細微變化。課堂先做簡單的三指版，回家之後也可以依自己的狀態做五指或十指。</p>
+            <div class="card-actions">
+              <!-- LINK: three-finger-gratitude -->
+              <a class="button button-primary button-audio pending-link" href="" data-link-key="three-finger-gratitude" aria-disabled="true">播放三指感謝練習</a>
+            </div>
+          </article>
+
+          <article class="audio-card">
+            <div class="audio-topline">
+              <div>
+                <p class="audio-kicker">音檔 02</p>
+                <h3>身體掃描練習</h3>
+              </div>
+              <span class="time-chip">約 31 分鐘</span>
+            </div>
+            <p class="suitable"><strong>適合時機：</strong>能留出一段完整、不容易被打擾的時間時；也可以安排在睡前或一天開始前。</p>
+            <blockquote>「身體掃描的意圖之一，是讓我們暫時離開用思考經驗世界的模式，回到感知。身體一直都在此時此地，像一座港灣，讓漂進回憶、擔心或期待裡的心，重新找到可以停泊的地方。」</blockquote>
+            <p class="audio-description">跟著引導，依序把注意力帶到身體不同部位，留意觸感、溫度、緊繃、放鬆，或此刻沒有明顯感覺的地方。如實知道：此刻的身體正在經歷什麼。</p>
+            <div class="card-actions">
+              <!-- LINK: body-scan-1 -->
+              <a class="button button-primary button-audio pending-link" href="" data-link-key="body-scan-1" aria-disabled="true">播放身體掃描練習</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="week-section week-2" id="week-2" aria-labelledby="week-2-title">
+      <div class="container week-layout">
+        <div class="week-intro">
+          <span class="week-label">第二週</span>
+          <h2 id="week-2-title">另一種存在方式：身心同在</h2>
+          <p>當我們長時間活在頭腦裡，很容易把想法當成全部的經驗。第二週練習透過呼吸與身體感覺，把自己定錨在當下，從間接的思考，回到身體正在經驗的這一刻。</p>
+          <p>這一週也開始留意：同一件事，可能因為不同的詮釋，帶來不同的情緒、身體感覺與行動衝動。</p>
+          <div class="focus-box">
+            <h3>本週練習重點</h3>
+            <ul>
+              <li>以呼吸、腳底、坐姿或雙手的感覺作為定錨點。</li>
+              <li>當注意力被想法帶走時，練習一次次回到身體。</li>
+              <li>在聆聽與說話時，保留一部分注意力感受自己。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="audio-list">
+          <article class="audio-card">
+            <div class="audio-topline">
+              <div>
+                <p class="audio-kicker">音檔 01</p>
+                <h3>身體掃描練習二</h3>
+              </div>
+              <span class="time-chip">約 29 分鐘</span>
+            </div>
+            <p class="suitable"><strong>適合時機：</strong>想延續第一週身體掃描，或感覺自己一直在頭腦裡打轉時。</p>
+            <blockquote>「身體掃描的意圖，並不是要達到完全的專注、放鬆或平靜。很單純地觀察每一個當下，身心正在發生什麼，直接經驗『身心同在』的模式。連想要把它做好的反應，也可能是練習帶來的珍貴看見。」</blockquote>
+            <p class="audio-description">延續身體掃描的修習，帶著好奇與友善，逐步覺察身體不同區域。當分心、想睡或沒有感覺時，不需要評分，只要留意到，再回到引導與身體。</p>
+            <div class="card-actions">
+              <!-- LINK: body-scan-2 -->
+              <a class="button button-primary button-audio pending-link" href="" data-link-key="body-scan-2" aria-disabled="true">播放身體掃描練習二</a>
+            </div>
+          </article>
+
+          <article class="audio-card">
+            <div class="audio-topline">
+              <div>
+                <p class="audio-kicker">音檔 02</p>
+                <h3>靜坐觀呼吸練習</h3>
+              </div>
+              <span class="time-chip">約 9 分鐘</span>
+            </div>
+            <p class="suitable"><strong>適合時機：</strong>工作前、午休、轉換任務時，或想用一段較短的靜坐安頓自己時。</p>
+            <blockquote>「把心安放在一個點上面，把心安放在呼吸的感覺上。辨識分心、溫柔回來，也留意自己的心總是喜歡飄去哪裡。」</blockquote>
+            <p class="audio-description">找到舒服而穩定的坐姿，把注意力帶到呼吸最容易被感覺到的位置。感受每一次吸氣與呼氣的變化；發現心飄走時，再溫柔地回來。</p>
+            <div class="card-actions">
+              <!-- LINK: sitting-breath -->
+              <a class="button button-primary button-audio pending-link" href="" data-link-key="sitting-breath" aria-disabled="true">播放靜坐觀呼吸練習</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="week-section week-3" id="week-3" aria-labelledby="week-3-title">
+      <div class="container week-layout">
+        <div class="week-intro">
+          <span class="week-label">第三週</span>
+          <h2 id="week-3-title">匯聚散亂的心</h2>
+          <p>心常常在背景忙著解決問題、回顧過去、計畫未來。忙碌本身沒有錯，只是當我們長時間停留在行動模式裡，注意力可能變得散亂，也更容易迷失在想法之中。</p>
+          <p>第三週練習在靜態與動態中，以呼吸和身體作為安住之所。不是逼自己停止思考，而是讓散開的注意力，有一條回來的路。</p>
+          <div class="focus-box">
+            <h3>本週練習重點</h3>
+            <ul>
+              <li>認識三步驟呼吸空間：覺察、聚焦、擴展。</li>
+              <li>在站立與伸展中，探索動態身體如何支持安定。</li>
+              <li>以呼吸為錨，再將覺察擴展到整個身體。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="audio-list">
+          <article class="audio-card">
+            <div class="audio-topline">
+              <div>
+                <p class="audio-kicker">音檔 01</p>
+                <h3>三步驟呼吸空間</h3>
+              </div>
+              <span class="time-chip">約 3 分鐘</span>
+            </div>
+            <p class="suitable"><strong>適合時機：</strong>起床後、工作開始前、回到家時、睡前，幫助快速轉換回到當下。</p>
+            <blockquote>「它像一個任意門。透過覺察、集中、擴展三個步驟，散亂的頭腦與散亂的心，回到一個比較清澈、清明、清醒的狀態。」</blockquote>
+            <p class="audio-description">依序練習覺察、聚焦與擴展：看見此刻的身體、情緒與想法，回到呼吸，再把覺察擴展到整個身體。短短幾分鐘，重新與當下連接。</p>
+            <div class="card-actions">
+              <!-- LINK: three-step-breathing-space -->
+              <a class="button button-primary button-audio pending-link" href="" data-link-key="three-step-breathing-space" aria-disabled="true">播放三步驟呼吸空間</a>
+            </div>
+          </article>
+
+          <article class="audio-card">
+            <div class="audio-topline">
+              <div>
+                <p class="audio-kicker">音檔 02</p>
+                <h3>站立伸展及呼吸</h3>
+              </div>
+              <span class="time-chip">約 23 分鐘</span>
+            </div>
+            <p class="suitable"><strong>適合時機：</strong>久坐之後、靜坐容易昏沉時，或想透過動作回到身體時。</p>
+            <blockquote>「這個練習不是瑜伽課，大家量力而為就可以了。重要的意圖是『探索身體的邊界』，也探索『動態的身體如何支持新的安定』。」</blockquote>
+            <p class="audio-description">在緩慢的站立伸展中，把注意力帶到關節、肌肉、呼吸與身體的界線。依自己的狀態選擇動作幅度，在移動中找到新的安定。若有頸椎、背部或其他健康不適，請只做適合自己的動作；任何時候都可以減小幅度或停止。</p>
+            <div class="card-actions">
+              <!-- LINK: standing-stretch -->
+              <a class="button button-primary button-audio pending-link" href="" data-link-key="standing-stretch" aria-disabled="true">播放站立伸展及呼吸</a>
+            </div>
+          </article>
+
+          <article class="audio-card">
+            <div class="audio-topline">
+              <div>
+                <p class="audio-kicker">音檔 03</p>
+                <h3>靜坐呼吸＋身體掃描</h3>
+              </div>
+              <span class="time-chip">約 18 分鐘</span>
+            </div>
+            <p class="suitable"><strong>適合時機：</strong>想安靜坐下來，從呼吸逐步擴展到全身時。</p>
+            <blockquote>「如果上次的靜坐觀呼吸是一個火車頭，這個練習有點像火車頭後面加一節。今天加上的這一節是身體。練習看見心散亂了，再溫柔地帶回來，持續培養這塊『後設覺知系統的肌肉』。」</blockquote>
+            <p class="audio-description">先在坐姿中安頓身體，以呼吸聚焦注意力，再把覺察擴展到整個身體。想法出現時不必跟著走，也不需要推開，只要一次次回到呼吸與身體。</p>
+            <div class="card-actions">
+              <!-- LINK: sitting-breath-body -->
+              <a class="button button-primary button-audio pending-link" href="" data-link-key="sitting-breath-body" aria-disabled="true">播放靜坐呼吸身體掃描</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="week-section week-4" id="week-4" aria-labelledby="week-4-title">
+      <div class="container week-layout">
+        <div class="week-intro">
+          <span class="week-label">第四週</span>
+          <h2 id="week-4-title">識別反應性</h2>
+          <p>面對不舒服的感覺、情緒或情境，我們常會很快出現喜歡、不喜歡、抓住、推開或立刻做點什麼的反應。這些反應有保護我們的用意，有時也可能讓原本的困難繼續擴大。</p>
+          <p>第四週開始走進更深的身心探索。練習先認出反應正在發生，讓刺激與回應之間，多出一點可以看見與選擇的空間。</p>
+          <div class="focus-box">
+            <h3>本週練習重點</h3>
+            <ul>
+              <li>留意身體的緊繃、不適，以及想移動、抓住或推開的衝動。</li>
+              <li>觀察聲音、念頭與情緒的出現、變化和消失。</li>
+              <li>當經驗太強烈時，可以回到錨點或先停止練習。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="audio-list">
+          <article class="audio-card">
+            <div class="audio-topline">
+              <div>
+                <p class="audio-kicker">音檔 01</p>
+                <h3>無揀擇覺察－長靜坐</h3>
+              </div>
+              <span class="time-chip">約 30 分鐘</span>
+            </div>
+            <p class="suitable"><strong>適合時機：</strong>有一段完整時間，並願意進行較深、較長的靜坐探索時。</p>
+            <blockquote>「從姿勢與呼吸開始，將覺察擴展到身體，再進入聲音與念頭；不刻意尋找或挑選某一種經驗，而是接收當下自然出現的經驗。」</blockquote>
+            <p class="audio-description">從坐姿與呼吸開始，把覺察逐步擴展到整個身體、聲音、念頭與情緒。練習留意喜歡、不喜歡，以及想立刻反應的衝動；如實觀察經驗的出現、停留、變化與離開。如果感受太強烈，可以帶著覺知調整姿勢，也可以回到呼吸或熟悉的身體錨點。你始終可以選擇先照顧自己。</p>
+            <div class="card-actions">
+              <!-- LINK: open-awareness-long-sit -->
+              <a class="button button-primary button-audio pending-link" href="" data-link-key="open-awareness-long-sit" aria-disabled="true">播放長靜坐</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="week-section week-5" id="week-5" aria-labelledby="week-5-title">
+      <div class="container week-layout">
+        <div class="week-intro">
+          <span class="week-label">第五週</span>
+          <h2 id="week-5-title">容許並如其所是</h2>
+          <p>遇到困難時，身心很快就會啟動熟悉的反應：緊縮、抗拒、逃開、急著解決，或反覆糾纏。這些反應帶著保護我們的用意；當它們一路接手，也可能讓原本的痛苦繼續延長。</p>
+          <p>第五週練習把困難放進更寬廣的覺知裡。先安頓自己，看見困難如何落在身體，再帶著容許、好奇與友善靠近一點。這份練習不要求你喜歡不舒服，也沒有要讓困難立刻消失。當排斥少了一些燃料，我們便多出一點空間，可以停一下，重新選擇此刻更有智慧的回應。</p>
+          <div class="focus-box">
+            <h3>本週練習重點</h3>
+            <ul>
+              <li>先回到呼吸或熟悉的身體錨點，確認自己有足夠的穩定與資源。</li>
+              <li>留意困難帶來的緊縮、排斥、不適，以及想逃開或立刻解決的衝動。</li>
+              <li>用命名、呼吸、容許與友善靠近困難；感受太強烈時，回到錨點或先停止。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="audio-list">
+          <article class="audio-card">
+            <div class="audio-topline">
+              <div>
+                <p class="audio-kicker">音檔 01</p>
+                <h3>與困難共處（艱辛禪）</h3>
+              </div>
+              <span class="time-chip">約 26 分鐘</span>
+            </div>
+            <p class="suitable"><strong>適合時機：</strong>有一段完整時間，身心相對穩定，並願意探索一個輕度到中度的困難經驗時。</p>
+            <blockquote>「這個練習沒有一個『對的樣子』，沒有要讓自己變得喜歡它。它是一個邀請，嘗試跟困難建立一種新的關係：友善一點、歡迎一點、好奇一點、允許一點、平等一點。」</blockquote>
+            <p class="audio-description">先從姿勢、呼吸與身體安頓自己，再把一個輕度到中度的困難放到「新的工作臺」上，辨認相關的念頭、情緒與身體感覺。在可承受的範圍內靠近感受最明顯的部位，讓呼吸與覺知進出，也可以輕輕對自己說：「有這樣的感覺是可以的。不喜歡它沒有關係，它已經存在了。」如果感受變得太強烈，請回到呼吸或熟悉的身體錨點；任何時候都可以睜開眼睛、調整姿勢或停止練習。</p>
+            <div class="card-actions">
+              <!-- LINK: difficulties-practice -->
+              <a class="button button-primary button-audio pending-link" href="" data-link-key="difficulties-practice" aria-disabled="true">播放與困難共處</a>
+            </div>
+          </article>
+
+          <article class="audio-card">
+            <div class="audio-topline">
+              <div>
+                <p class="audio-kicker">音檔 02</p>
+                <h3>三步驟呼吸空間（額外引導版）</h3>
+              </div>
+              <span class="time-chip">約 9 分鐘</span>
+            </div>
+            <p class="suitable"><strong>適合時機：</strong>感到壓力升高、持續失衡或遇到困難時，當下沒有足夠時間進行長修習時。</p>
+            <blockquote>「在生活中遇到困難的情境，可能當下沒有二十五分鐘，或許只有五分鐘。這個練習可以當作支持自己的第一步，額外引導的地方就是命名跟標記。」</blockquote>
+            <p class="audio-description">延續覺察、集中、擴展三個步驟，這個版本加入了命名與標記。先辨認此刻正在發生什麼，例如「肩膀有緊繃感」、「自我批評的想法出現了」、「這是焦慮」；再把注意力帶回呼吸或其他錨點，最後擴展到整個身體，以寬廣的覺知容許經驗如其所是。如果有支持，也可以將一隻手放在胸口，作為自我照顧的手勢。</p>
+            <div class="card-actions">
+              <!-- LINK: three-step-breathing-space-guided -->
+              <a class="button button-primary button-audio pending-link" href="" data-link-key="three-step-breathing-space-guided" aria-disabled="true">播放額外引導版</a>
+            </div>
+          </article>
+
+          <article class="audio-card">
+            <div class="audio-topline">
+              <div>
+                <p class="audio-kicker">音檔 03</p>
+                <h3>友善修習（慈心禪）</h3>
+              </div>
+              <span class="time-chip">約 14 分鐘</span>
+            </div>
+            <p class="suitable"><strong>適合時機：</strong>發現自己容易煩躁、對人事物升起排斥，或想為身心培養多一點友善品質時。</p>
+            <blockquote>「當有一段時間，我發現自己每天看誰都不爽的時候，我就知道：或許我該花個十五分鐘，為自己慈心禪一下。」</blockquote>
+            <p class="audio-description">從一位讓自己感到友善溫暖的人或小動物開始，感受相關的身體感覺，再讓祝願依序流向正在經歷小困難的人、自己與身邊的人：「願內心感到平和自在，願健康平安，願善自珍重，好好照顧自己。」這些祝願可以替換成最能支持你的版本。練習的意圖，是培養一種能夠調和排斥與厭惡的友善品質，讓困難出現時，心裡多一個靠近、疼惜與好奇的選擇。</p>
+            <div class="card-actions">
+              <!-- LINK: loving-kindness-practice -->
+              <a class="button button-primary button-audio pending-link" href="" data-link-key="loving-kindness-practice" aria-disabled="true">播放友善修習</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="manual" aria-labelledby="manual-title">
+      <div class="container">
+        <article class="manual-card">
+          <div>
+            <p class="eyebrow">Learning guide</p>
+            <h2 id="manual-title">練習音檔之外，也可以回到學習手冊</h2>
+            <p>學習手冊整理了每週主題、課程觀念與家中修習說明。你可以在開始練習前先閱讀，也可以在練習之後回來翻看，讓音檔中的經驗與課程內容慢慢連結起來。</p>
+            <div class="card-actions">
+              <!-- LINK: learning-manual -->
+              <a class="button button-primary pending-link" href="" data-link-key="learning-manual" aria-disabled="true">開啟正念認知生活學習手冊</a>
+            </div>
+          </div>
+          <div class="manual-symbol" aria-hidden="true">念</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing" id="reminder" aria-labelledby="closing-title">
+      <div class="container">
+        <p class="eyebrow">Before you begin</p>
+        <h2 id="closing-title">不需做到完美，只需一次次的回到覺察</h2>
+        <p>為自己找一個相對安穩、不容易被打擾的位置。你可以坐著、躺著，或依音檔提示站立練習。</p>
+        <p>練習時走神、分心或沒有特別感覺，都可能發生。當你發現注意力飄走了，那一刻已經是覺察；再把注意力輕輕帶回聲音、呼吸或身體就好。</p>
+        <p>任何時候，如果身體明顯不適或心裡承受不了，都可以調整姿勢、睜開眼睛或先停止。照顧當下的身心需要，是第一優先。</p>
+        <a class="button" href="#quick">回到音檔快速選擇</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img class="footer-logo" src="內在轉化教練學苑/內在轉化學苑LOGO_藍.png" alt="內在轉化教練學苑 Logo">
+    <div class="footer-academy">內在轉化教練學苑 · Turn Within Coaching Academy</div>
+    <div class="footer-course">正念認知生活課程 · 音檔練習入口</div>
+    <p class="copyright">所有版權歸內在轉化教練學苑所有，請勿私下轉載或銷售。</p>
+  </footer>
+
+  <script>
+    const resourceLinks = {
+      'learning-manual': 'https://drive.google.com/file/d/1yXLjCZLJkFk_zfAfso8_agRo9jAlWyQW/view?usp=drive_link',
+      'three-finger-gratitude': 'https://drive.google.com/file/d/1VcHA1v3Cj6rTweNLS5Z2HUBWKbUlqWqO/view?usp=drive_link',
+      'body-scan-1': 'https://drive.google.com/file/d/15aOaT1E41Ecya4RxpKYXND6zf3x3WYo3/view?usp=sharing',
+      'body-scan-2': 'https://drive.google.com/file/d/1RWPHqaEynLTzSold0lj-IkOthB9AHQRX/view?usp=sharing',
+      'sitting-breath': 'https://drive.google.com/file/d/1cRh3wC3GFcBMSp2DjnTwzBwkN0mC_oO4/view?usp=sharing',
+      'three-step-breathing-space': 'https://drive.google.com/file/d/1FpA1oIBXxh-13OuU3qX9xsl48koezLnD/view?usp=sharing',
+      'standing-stretch': 'https://drive.google.com/file/d/1iNVuvRdGPz5Vk5T8vXdzRZAgZtoI_5JZ/view?usp=sharing',
+      'sitting-breath-body': 'https://drive.google.com/file/d/1NOR5ZevS0wbFWk_9kWYFFfEM06VWvrYJ/view?usp=sharing',
+      'open-awareness-long-sit': 'https://drive.google.com/file/d/12pbyp9Lj_Lxr-DoR5VojOogMRsGSK9Fy/view?usp=sharing',
+      'difficulties-practice': 'https://drive.google.com/file/d/1y8AWhmRMKHHYB2rrp8bDaeDgivENk63b/view?usp=sharing',
+      'three-step-breathing-space-guided': 'https://drive.google.com/file/d/1-pqpy7OWy_srxopz1Un7T5NIwXIMqN3Q/view?usp=sharing',
+      'loving-kindness-practice': 'https://drive.google.com/file/d/1vVt8EDShCpACh3YLL45e2fVtao7Yys6p/view?usp=sharing'
+    };
+
+    document.querySelectorAll('[data-link-key]').forEach((link) => {
+      const url = resourceLinks[link.dataset.linkKey];
+      if (url) {
+        link.href = url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.classList.remove('pending-link');
+        link.removeAttribute('aria-disabled');
+      } else {
+        link.addEventListener('click', (event) => event.preventDefault());
+      }
+    });
+  </script>
+</body>
+</html>
