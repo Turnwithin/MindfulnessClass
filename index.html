@@ -613,6 +613,8 @@
       line-height: 1.8;
     }
 
+    .mobile-detail-toggle { display: none; }
+
     .week-2 .week-label { background: #6f8790; }
     .week-2 .focus-box { border-color: #6f8790; }
     .week-3 .week-label { background: var(--clay); }
@@ -761,13 +763,14 @@
     }
 
     @media (max-width: 720px) {
-      body { font-size: 16px; }
-      .container { width: min(calc(100% - 28px), var(--content)); }
+      html { scroll-padding-top: 100px; }
+      body { font-size: 15px; line-height: 1.8; }
+      .container { width: min(calc(100% - 22px), var(--content)); }
       .nav {
-        width: min(calc(100% - 24px), var(--content));
+        width: min(calc(100% - 20px), var(--content));
         flex-wrap: wrap;
-        gap: 6px 12px;
-        padding-block: 8px;
+        gap: 5px 12px;
+        padding-block: 6px;
       }
       .brand-logo { width: 122.5px; }
       .hero-botanical { right: -92px; opacity: 0.15; }
@@ -782,24 +785,123 @@
       .nav-links a {
         flex: 1 1 0;
         padding: 5px 4px;
-        font-size: 13px;
+        font-size: 12px;
         text-align: center;
       }
-      .section, .week-section { padding-block: 72px; }
+
+      .hero { padding-block: 46px 54px; }
+      .hero .eyebrow { margin-bottom: 12px; font-size: 11px; }
+      h1 { margin-bottom: 19px; font-size: 39px; line-height: 1.14; }
+      h1 span { margin-top: 9px; font-size: 16px; }
+      .hero-copy { font-size: 15px; line-height: 1.85; }
+      .hero-copy p { margin-bottom: 7px; }
+      .hero-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 25px;
+      }
+      .hero-actions .button {
+        width: 100%;
+        min-height: 46px;
+        padding: 9px 10px;
+        font-size: 13px;
+      }
+      .hero-actions .button:nth-child(3) { grid-column: 1 / -1; }
+
+      .button { font-size: 13px; }
+      .section, .week-section { padding-block: 56px; }
+      .section-heading { margin-bottom: 26px; }
+      .section-heading h2,
+      .week-intro h2 { margin-bottom: 12px; font-size: 27px; }
+      .section-heading p,
+      .week-intro > p { font-size: 14px; line-height: 1.8; }
       .manual-card { grid-template-columns: 1fr; }
       .manual-symbol { display: none; }
-      .quick-grid { grid-template-columns: 1fr; }
-      .quick-card { min-height: 220px; }
-      .audio-topline { display: block; }
-      .time-chip { margin-top: 13px; }
+      .quick-grid { grid-template-columns: 1fr; gap: 12px; }
+      .quick-card { min-height: auto; padding: 18px; }
+      .quick-card h3 { margin-bottom: 5px; font-size: 18px; }
+      .quick-card p { font-size: 13.5px; line-height: 1.75; }
+      .quick-time { margin-bottom: 14px; }
+
+      .overview { border-radius: 18px; }
+      .overview-group-title { padding: 9px 14px 9px 12px; font-size: 14px; }
       .overview-row {
-        grid-template-columns: minmax(0, 1fr) 72px auto;
-        gap: 10px;
-        padding: 15px;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+          "copy time"
+          "button button";
+        gap: 10px 11px;
+        min-height: 0;
+        padding: 14px;
       }
-      .overview-copy { grid-column: 1; grid-row: 1; }
-      .overview-time { grid-column: 2; grid-row: 1; }
-      .overview-row .button { grid-column: 3; grid-row: 1; }
+      .overview-copy { grid-area: copy; }
+      .overview-name { font-size: 14px; line-height: 1.5; }
+      .overview-time { grid-area: time; align-self: start; font-size: 12px; }
+      .overview-intro {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        font-size: 12.5px;
+        line-height: 1.65;
+      }
+      .overview-row .button {
+        grid-area: button;
+        width: 100%;
+        min-height: 43px;
+        font-size: 13px;
+      }
+
+      .week-layout { gap: 32px; }
+      .focus-box { margin-top: 20px; padding: 15px; }
+      .focus-box h3 { font-size: 15px; }
+      .focus-box ul { font-size: 13px; line-height: 1.8; }
+      .audio-list { gap: 14px; }
+      .audio-card { padding: 17px; border-radius: 18px; }
+      .audio-topline {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+      .audio-kicker { margin-bottom: 3px; }
+      .audio-card h3 { font-size: 19px; line-height: 1.45; }
+      .time-chip { margin-top: 0; padding: 4px 8px; font-size: 11px; }
+      .audio-description { font-size: 13.5px; line-height: 1.8; }
+      .audio-card.is-collapsible:not(.is-expanded) .suitable,
+      .audio-card.is-collapsible:not(.is-expanded) blockquote { display: none; }
+      .audio-card.is-collapsible:not(.is-expanded) .audio-description {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      .audio-card.is-expanded .suitable { margin-bottom: 15px; font-size: 13.5px; line-height: 1.8; }
+      .audio-card.is-expanded blockquote { margin: 16px 0; padding: 14px 15px; font-size: 13.5px; line-height: 1.8; }
+      .mobile-detail-toggle {
+        display: inline-flex;
+        min-height: 38px;
+        align-items: center;
+        margin-top: 7px;
+        padding: 7px 0;
+        border: 0;
+        color: var(--indigo);
+        background: transparent;
+        font: inherit;
+        font-size: 12.5px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .audio-card .card-actions { margin-top: 13px; }
+      .audio-card .card-actions .button { width: 100%; min-height: 45px; font-size: 13px; }
+
+      .manual-card { padding: 22px 18px; border-radius: 18px; }
+      .manual-card h2 { font-size: 25px; }
+      .manual-card p { font-size: 13.5px; line-height: 1.8; }
+      .closing { padding-block: 72px; }
+      .closing h2 { font-size: 29px; }
+      .closing p { font-size: 13.5px; line-height: 1.8; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -838,9 +940,6 @@
         <p class="eyebrow">Mindfulness Practice</p>
         <h1>正念認知生活<span>音檔練習入口</span></h1>
         <div class="hero-copy">
-          <p>有些日子，我們有半小時可以坐下來；有些日子，只能留給自己三分鐘。</p>
-          <p>都沒有關係。</p>
-          <p>可以看看此刻有多少時間，選一段剛剛好的音檔。</p>
           <p>讓注意力從忙碌的頭腦，回到呼吸、身體，以及正在發生的這一刻。</p>
           <p>不需要做到完美，只需一次次的回到覺察就好</p>
         </div>
@@ -1327,6 +1426,29 @@
       } else {
         link.addEventListener('click', (event) => event.preventDefault());
       }
+    });
+
+    document.querySelectorAll('.audio-card').forEach((card) => {
+      const actions = card.querySelector('.card-actions');
+      const title = card.querySelector('h3')?.textContent.trim() || '這個練習';
+      if (!actions) return;
+
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'mobile-detail-toggle';
+      toggle.textContent = '＋ 查看完整介紹';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', `查看${title}的完整介紹`);
+
+      card.classList.add('is-collapsible');
+      actions.before(toggle);
+
+      toggle.addEventListener('click', () => {
+        const expanded = card.classList.toggle('is-expanded');
+        toggle.textContent = expanded ? '－ 收起完整介紹' : '＋ 查看完整介紹';
+        toggle.setAttribute('aria-expanded', String(expanded));
+        toggle.setAttribute('aria-label', expanded ? `收起${title}的完整介紹` : `查看${title}的完整介紹`);
+      });
     });
   </script>
 </body>
