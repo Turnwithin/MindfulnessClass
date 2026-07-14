@@ -3,59 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="內在轉化教練學苑｜正念認知生活課程第二階段第一至第五週學習手冊與音檔練習入口。">
+  <meta name="description" content="內在轉化教練學苑｜正念認知生活課程第二階段第一至第五週音檔練習入口。">
   <title>內在轉化教練學苑｜正念認知生活・音檔練習入口</title>
   <style>
     :root {
-      --paper: #f6f3ec;
-      --paper-deep: #ece8de;
-      --card: rgba(255, 255, 255, 0.75);
-      --ink: #21333b;
-      --muted: #647278;
-      --line: rgba(33, 51, 59, 0.14);
-      --sage: #879b8b;
-      --sage-soft: #dfe7df;
+      --paper: #f7f4ee;
+      --ink: #22333b;
       --indigo: #273d50;
-      --clay: #b47d68;
-      --gold: #c6a66a;
-      --coral: #b86f65;
-      --week-gray: #9ca6a9;
-      --academy-banner: #b5a994;
-      --academy-cream: #fffaf0;
-      --surface-hero: var(--paper);
-      --surface-browse: var(--sage-soft);
-      --surface-week-nav: var(--paper);
-      --surface-week-deep: var(--paper-deep);
-      --surface-week-light: var(--paper);
-      --shadow: 0 18px 50px rgba(33, 51, 59, 0.09);
-      --radius-lg: 30px;
-      --radius-md: 20px;
-      --radius-sm: 13px;
-      --content: 1120px;
+      --sage: #879b8b;
+      --sage-deep: #6f8578;
+      --muted: #6e7c81;
+      --faint: #97a3a6;
+      --line: rgba(34, 51, 59, 0.1);
+      --card: #ffffff;
+      --banner: #b5a994;
+      --cream: #fffaf0;
+      --radius: 16px;
     }
 
     * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 92px;
+      scroll-padding-top: 76px;
     }
 
     body {
       margin: 0;
       color: var(--ink);
-      background:
-        radial-gradient(circle at 4% 6%, rgba(198, 166, 106, 0.16), transparent 26rem),
-        radial-gradient(circle at 96% 28%, rgba(135, 155, 139, 0.18), transparent 30rem),
-        var(--paper);
+      background: var(--paper);
       font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
-      font-size: 17px;
-      line-height: 1.85;
+      font-size: 16px;
+      line-height: 1.75;
       -webkit-font-smoothing: antialiased;
     }
 
     a { color: inherit; }
-
     button, a { -webkit-tap-highlight-color: transparent; }
 
     .skip-link {
@@ -68,845 +51,428 @@
       border-radius: 8px;
       transform: translateY(-150%);
     }
-
     .skip-link:focus { transform: translateY(0); }
 
+    .container {
+      width: min(calc(100% - 40px), 680px);
+      margin-inline: auto;
+    }
+
+    /* ---------- Header ---------- */
     .site-header {
       position: sticky;
       top: 0;
       z-index: 30;
-      border-bottom: 1px solid rgba(255, 250, 240, 0.2);
-      background: var(--academy-banner);
-      box-shadow: 0 8px 24px rgba(33, 51, 59, 0.08);
-      backdrop-filter: blur(16px);
+      background: var(--banner);
     }
 
     .nav {
-      width: min(calc(100% - 36px), var(--content));
-      min-height: 72px;
+      width: min(calc(100% - 32px), 680px);
+      min-height: 60px;
       margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: block;
-      flex: 0 0 auto;
-      text-decoration: none;
-    }
-
-    .brand-logo {
-      display: block;
-      width: 159px;
-      height: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    .nav-links::-webkit-scrollbar { display: none; }
-
-    .nav-links a {
-      padding: 8px 11px;
-      border-radius: 999px;
-      color: rgba(255, 250, 240, 0.9);
-      font-size: 14px;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: background 160ms ease, color 160ms ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      color: var(--academy-cream);
-      background: rgba(255, 255, 255, 0.14);
-      outline: none;
-    }
-
-    main { overflow: hidden; }
-
-    .container {
-      width: min(calc(100% - 40px), var(--content));
-      margin-inline: auto;
-    }
-
-    .hero {
-      min-height: 650px;
-      display: grid;
-      grid-template-columns: minmax(0, 760px);
-      align-items: center;
-      padding-block: 92px 84px;
-      position: relative;
-      isolation: isolate;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      z-index: -3;
-      inset: 0 calc(50% - 50vw);
-      background: var(--surface-hero);
-      pointer-events: none;
-    }
-
-    .flow-line {
-      position: absolute;
-      z-index: -1;
-      width: 760px;
-      height: 230px;
-      border-top: 1.5px solid rgba(198, 166, 106, 0.58);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .flow-line-one {
-      top: 34px;
-      right: -350px;
-      transform: rotate(9deg);
-    }
-
-    .flow-line-two {
-      bottom: -85px;
-      left: -260px;
-      border-color: rgba(135, 155, 139, 0.36);
-      transform: rotate(-7deg);
-    }
-
-    .botanical {
-      position: absolute;
-      z-index: 0;
-      width: 190px;
-      height: 220px;
-      opacity: 0.22;
-      pointer-events: none;
-      transform: rotate(12deg);
-    }
-
-    .botanical .stem {
-      position: absolute;
-      left: 92px;
-      bottom: 5px;
-      width: 2px;
-      height: 205px;
-      border-radius: 999px;
-      background: var(--sage);
-      transform: rotate(-27deg);
-      transform-origin: bottom;
-    }
-
-    .botanical .leaf {
-      position: absolute;
-      width: 58px;
-      height: 24px;
-      border-radius: 100% 0 100% 0;
-      background: linear-gradient(135deg, rgba(111, 139, 123, 0.9), rgba(170, 188, 174, 0.58));
-      transform-origin: 100% 50%;
-    }
-
-    .botanical .leaf:nth-child(2) { left: 31px; top: 146px; transform: rotate(29deg); }
-    .botanical .leaf:nth-child(3) { left: 50px; top: 108px; transform: rotate(14deg) scale(0.92); }
-    .botanical .leaf:nth-child(4) { left: 75px; top: 69px; transform: rotate(-2deg) scale(0.8); }
-    .botanical .leaf:nth-child(5) { left: 90px; top: 135px; transform: scaleX(-1) rotate(30deg); }
-    .botanical .leaf:nth-child(6) { left: 105px; top: 96px; transform: scaleX(-1) rotate(15deg) scale(0.9); }
-    .botanical .leaf:nth-child(7) { left: 116px; top: 57px; transform: scaleX(-1) rotate(3deg) scale(0.76); }
-
-    .hero-botanical {
-      top: 38px;
-      right: -48px;
-    }
-
-    .sparkle {
-      position: absolute;
-      z-index: 0;
-      width: 42px;
-      height: 42px;
-      opacity: 0.58;
-      pointer-events: none;
-    }
-
-    .sparkle::before,
-    .sparkle::after {
-      content: "";
-      position: absolute;
-      inset: 50% auto auto 50%;
-      background: var(--gold);
-      transform: translate(-50%, -50%);
-    }
-
-    .sparkle::before { width: 42px; height: 1px; }
-    .sparkle::after { width: 1px; height: 42px; }
-    .hero-sparkle { top: 130px; right: 24%; }
-
-    .eyebrow {
-      margin: 0 0 18px;
-      color: var(--clay);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-
-    h1, h2, h3, p { margin-top: 0; }
-
-    h1 {
-      margin-bottom: 28px;
-      color: var(--indigo);
-      font-family: "Songti TC", "Noto Serif TC", "PMingLiU", serif;
-      font-size: clamp(48px, 7vw, 82px);
-      font-weight: 600;
-      letter-spacing: -0.045em;
-      line-height: 1.08;
-    }
-
-    h1 span {
-      display: block;
-      margin-top: 14px;
-      color: var(--sage);
-      font-family: "PingFang TC", "Noto Sans TC", sans-serif;
-      font-size: clamp(19px, 2.3vw, 27px);
-      font-weight: 500;
-      letter-spacing: 0.11em;
-    }
-
-    .hero-copy {
-      max-width: 650px;
-      color: var(--muted);
-      font-size: clamp(17px, 1.7vw, 20px);
-    }
-
-    .hero-copy p { margin-bottom: 8px; }
-
-    .hero-actions,
-    .card-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 34px;
-    }
-
-    .button {
-      min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      padding: 11px 20px;
-      border: 1px solid transparent;
-      border-radius: 999px;
-      font-weight: 650;
-      line-height: 1.4;
-      text-decoration: none;
-      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
-    }
-
-    .button:hover { transform: translateY(-2px); }
-
-    .button:focus-visible {
-      outline: 3px solid rgba(180, 125, 104, 0.32);
-      outline-offset: 3px;
-    }
-
-    .button-primary {
-      color: #fff;
-      background: var(--indigo);
-      box-shadow: 0 12px 30px rgba(39, 61, 80, 0.18);
-    }
-
-    .button-secondary {
-      border-color: var(--line);
-      background: rgba(255, 255, 255, 0.55);
-    }
-
-    .button-audio::before {
-      content: "▶";
-      font-size: 11px;
-    }
-
-    .section { padding-block: 96px; }
-
-    .section-soft {
-      background: rgba(223, 231, 223, 0.45);
-      border-block: 1px solid rgba(33, 51, 59, 0.07);
-    }
-
-    #quick {
-      background: var(--surface-browse);
-      border-block-color: rgba(180, 125, 104, 0.1);
-    }
-
-    #weeks { background: var(--surface-week-nav); }
-
-    .section-heading {
-      max-width: 760px;
-      margin-bottom: 42px;
-    }
-
-    .section-heading h2,
-    .week-intro h2 {
-      margin-bottom: 18px;
-      color: var(--indigo);
-      font-family: "Songti TC", "Noto Serif TC", "PMingLiU", serif;
-      font-size: clamp(34px, 4vw, 52px);
-      font-weight: 600;
-      line-height: 1.28;
-    }
-
-    .section-heading p,
-    .week-intro > p { color: var(--muted); }
-
-    .reminder-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .reminder-card,
-    .quick-card,
-    .audio-card,
-    .manual-card {
-      border: 1px solid rgba(33, 51, 59, 0.1);
-      background: var(--card);
-      box-shadow: 0 12px 36px rgba(33, 51, 59, 0.055);
-    }
-
-    .reminder-card {
-      min-height: 190px;
-      padding: 27px;
-      border-radius: var(--radius-md);
-    }
-
-    .reminder-number {
-      width: 34px;
-      height: 34px;
-      margin-bottom: 17px;
-      display: grid;
-      place-items: center;
-      color: var(--indigo);
-      background: var(--sage-soft);
-      border-radius: 50%;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .reminder-card h3,
-    .quick-card h3,
-    .audio-card h3 { margin-bottom: 9px; font-size: 20px; }
-
-    .reminder-card p,
-    .quick-card p { margin-bottom: 0; color: var(--muted); font-size: 15px; }
-
-    .manual-card {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 40px;
-      padding: clamp(30px, 6vw, 62px);
-      border-radius: var(--radius-lg);
-      background:
-        linear-gradient(120deg, rgba(255,255,255,0.83), rgba(223,231,223,0.72));
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .manual-card::before,
-    .manual-card::after {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      width: 560px;
-      height: 165px;
-      border-top: 1.5px solid rgba(198, 166, 106, 0.55);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .manual-card::before { top: -78px; right: -240px; transform: rotate(8deg); }
-    .manual-card::after { bottom: -145px; left: -190px; border-color: rgba(135, 155, 139, 0.4); transform: rotate(-7deg); }
-    .manual-card > * { position: relative; z-index: 1; }
-
-    .manual-card h2 {
-      margin-bottom: 12px;
-      font-family: "Songti TC", "Noto Serif TC", serif;
-      font-size: clamp(30px, 4vw, 45px);
-      font-weight: 600;
-      line-height: 1.35;
-    }
-
-    .manual-card p { max-width: 720px; margin-bottom: 0; color: var(--muted); }
-
-    .manual-symbol {
-      width: 116px;
-      aspect-ratio: 0.78;
-      display: grid;
-      place-items: center;
-      border: 1.5px solid var(--sage);
-      border-radius: 8px 24px 8px 8px;
-      color: var(--sage);
-      font-family: "Songti TC", serif;
-      font-size: 34px;
-      transform: rotate(2deg);
-    }
-
-    .quick-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
       gap: 16px;
     }
 
-    .quick-card {
-      min-height: 250px;
-      display: flex;
-      flex-direction: column;
-      padding: 25px;
-      border-radius: var(--radius-md);
-    }
+    .brand { display: block; flex: 0 0 auto; }
+    .brand-logo { display: block; width: 140px; height: auto; }
 
-    .quick-time,
-    .time-chip,
-    .week-label {
-      display: inline-flex;
-      align-items: center;
-      width: fit-content;
+    .nav-manual {
+      padding: 7px 14px;
+      border: 1px solid rgba(255, 250, 240, 0.45);
       border-radius: 999px;
+      color: var(--cream);
       font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 160ms ease;
+    }
+    .nav-manual:hover,
+    .nav-manual:focus-visible {
+      background: rgba(255, 255, 255, 0.16);
+      outline: none;
     }
 
-    .quick-time {
-      margin-bottom: 22px;
-      padding: 5px 10px;
-      color: var(--clay);
-      background: rgba(180, 125, 104, 0.11);
+    /* ---------- Hero ---------- */
+    .hero {
+      padding-block: 56px 40px;
+      text-align: center;
     }
 
-    .quick-card .button {
-      min-height: 42px;
-      margin-top: auto;
-      align-self: flex-start;
-      padding: 8px 0 0;
+    .hero h1 {
+      margin: 0 0 10px;
       color: var(--indigo);
-      font-size: 14px;
+      font-family: "Songti TC", "Noto Serif TC", "PMingLiU", serif;
+      font-size: clamp(34px, 6vw, 46px);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.25;
     }
 
-    .quick-card .button::after { content: " →"; }
-
-    .week-section { padding-block: 110px; }
-    .week-1,
-    .week-3,
-    .week-5 { background: var(--surface-week-deep); }
-    .week-2,
-    .week-4 { background: var(--surface-week-light); }
-    .week-section + .week-section { border-top: 1px solid var(--line); }
-
-    .week-layout {
-      display: grid;
-      grid-template-columns: minmax(270px, 0.78fr) minmax(0, 1.5fr);
-      gap: clamp(50px, 8vw, 105px);
-      align-items: start;
+    .hero .subtitle {
+      margin: 0 0 18px;
+      color: var(--sage-deep);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-indent: 0.32em;
     }
 
-    .week-intro {
-      position: sticky;
-      top: 108px;
-    }
-
-    .week-label {
-      margin-bottom: 18px;
-      padding: 5px 12px;
-      color: #fff;
-      background: var(--sage);
-    }
-
-    .week-intro h2 { font-size: clamp(34px, 4vw, 48px); }
-
-    .focus-box {
-      margin-top: 30px;
-      padding: 22px;
-      border-left: 3px solid var(--sage);
-      background: rgba(255, 255, 255, 0.4);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    }
-
-    .focus-box h3 { margin-bottom: 10px; font-size: 16px; }
-
-    .focus-box ul {
-      margin: 0;
-      padding-left: 1.2em;
+    .hero .lead {
+      margin: 0 auto;
+      max-width: 540px;
       color: var(--muted);
       font-size: 15px;
+      text-wrap: balance;
     }
 
-    .focus-box li + li { margin-top: 7px; }
-
-    .audio-list { display: grid; gap: 22px; }
-
-    .audio-card {
-      padding: clamp(26px, 4vw, 42px);
-      border-radius: var(--radius-lg);
-    }
-
-    .audio-topline {
+    .week-jump {
       display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 28px;
+      padding: 0;
+      list-style: none;
     }
 
-    .audio-kicker {
-      margin-bottom: 7px;
-      color: var(--clay);
-      font-size: 12px;
-      font-weight: 750;
-      letter-spacing: 0.13em;
+    .week-jump a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 6px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--indigo);
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: border-color 160ms ease, background 160ms ease;
     }
 
-    .audio-card h3 {
+    .week-jump a:hover,
+    .week-jump a:focus-visible {
+      border-color: var(--sage);
+      background: #f2f5f1;
+      outline: none;
+    }
+
+    /* ---------- Playlist ---------- */
+    .playlist { padding-bottom: 24px; }
+
+    .week-block { margin-bottom: 44px; }
+
+    .week-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-left: 2px;
+    }
+
+    .week-num {
+      flex: 0 0 auto;
+      color: var(--sage-deep);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .week-head h2 {
       margin: 0;
       color: var(--indigo);
-      font-size: clamp(23px, 2.7vw, 31px);
+      font-family: "Songti TC", "Noto Serif TC", "PMingLiU", serif;
+      font-size: clamp(20px, 3vw, 23px);
+      font-weight: 600;
       line-height: 1.4;
     }
 
-    .time-chip {
+    .track-list {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      overflow: hidden;
+    }
+
+    .track {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-height: 72px;
+      padding: 16px 18px;
+      text-decoration: none;
+      transition: background 160ms ease;
+    }
+
+    .track + .track { border-top: 1px solid var(--line); }
+
+    .track:hover,
+    .track:focus-visible {
+      background: #f6f8f5;
+      outline: none;
+    }
+
+    .play-icon {
       flex: 0 0 auto;
-      padding: 6px 12px;
-      color: var(--indigo);
-      background: var(--sage-soft);
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #eef2ec;
+      color: var(--sage-deep);
+      transition: background 160ms ease, color 160ms ease;
+    }
+
+    .track:hover .play-icon,
+    .track:focus-visible .play-icon {
+      background: var(--indigo);
+      color: #fff;
+    }
+
+    .play-icon svg { display: block; margin-left: 2px; }
+
+    .track-copy { flex: 1 1 auto; min-width: 0; }
+
+    .track-name {
+      display: block;
+      color: var(--ink);
+      font-size: 15.5px;
+      font-weight: 650;
+      line-height: 1.5;
+    }
+
+    .track-intro {
+      display: block;
+      margin-top: 2px;
+      color: var(--faint);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .track-time {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 13px;
+      font-variant-numeric: tabular-nums;
       white-space: nowrap;
     }
 
-    .suitable {
-      margin-bottom: 20px;
-      color: var(--muted);
-      font-size: 15px;
+    .track.pending-link { cursor: default; opacity: 0.55; }
+    .track.pending-link:hover { background: transparent; }
+    .track.pending-link:hover .play-icon { background: #eef2ec; color: var(--sage-deep); }
+
+    /* ---------- Manual ---------- */
+    .manual-section { padding-block: 44px 56px; }
+
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      margin-bottom: 40px;
+      background: var(--line);
     }
 
-    .suitable strong { color: var(--ink); }
-
-    blockquote {
-      margin: 24px 0;
-      padding: 19px 22px;
-      border-left: 3px solid var(--clay);
-      color: var(--indigo);
-      background: rgba(180, 125, 104, 0.065);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      font-family: inherit;
-      font-size: 15px;
-      font-weight: 400;
-      line-height: 1.8;
-    }
-
-    .audio-description {
-      margin-bottom: 0;
-      color: #44575f;
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .mobile-detail-toggle { display: none; }
-
-    .week-2 .week-label { background: #6f8790; }
-    .week-2 .focus-box { border-color: #6f8790; }
-    .week-3 .week-label { background: var(--clay); }
-    .week-3 .focus-box { border-color: var(--clay); }
-    .week-4 .week-label { background: var(--indigo); }
-    .week-4 .focus-box { border-color: var(--indigo); }
-    .week-5 .week-label { color: var(--indigo); background: var(--gold); }
-    .week-5 .focus-box { border-color: var(--gold); }
-
-    .overview {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.58);
-    }
-
-    .overview-group + .overview-group { border-top: 1px solid var(--line); }
-
-    .overview-group-title {
+    .manual {
       display: flex;
-      align-items: baseline;
-      gap: 10px;
-      min-height: 46px;
-      padding: 10px 22px 10px 18px;
-      color: var(--indigo);
-      background: var(--paper);
-      border-left: 4px solid var(--gold);
-      border-bottom: 1px solid var(--line);
-      font-size: 15px;
-      font-weight: 750;
-      letter-spacing: 0.04em;
-    }
-
-    .overview-group-title span {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0;
-    }
-
-    .overview-group .overview-row { background: rgba(255, 255, 255, 0.9); }
-
-    .overview-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 115px 170px;
       align-items: center;
+      justify-content: space-between;
       gap: 18px;
-      min-height: 86px;
-      padding: 13px 22px;
-      border-bottom: 1px solid var(--line);
+      padding: 24px 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #f0efe7;
     }
 
-    .overview-group .overview-row:last-child { border-bottom: 0; }
-    .overview-copy { min-width: 0; }
-    .overview-name { display: block; font-weight: 650; }
-    .overview-intro {
-      display: block;
-      margin-top: 3px;
-      color: rgba(100, 114, 120, 0.78);
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 1.55;
-    }
-    .overview-time { color: var(--coral); font-size: 14px; font-weight: 750; }
-    .overview-row .button { min-height: 40px; padding: 8px 14px; font-size: 14px; }
-
-    .closing {
-      padding-block: 110px;
-      color: #fff;
-      background: var(--indigo);
-      text-align: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .closing::before,
-    .closing::after {
-      content: "";
-      position: absolute;
-      width: 760px;
-      height: 220px;
-      border-top: 1px solid rgba(198, 166, 106, 0.45);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .closing::before { top: 22px; right: -360px; transform: rotate(8deg); }
-    .closing::after { bottom: -170px; left: -250px; border-color: rgba(223, 231, 223, 0.22); transform: rotate(-9deg); }
-    .closing .container { position: relative; z-index: 1; }
-
-    .footer-logo {
-      width: 46px;
-      height: auto;
-      margin-bottom: 10px;
-      opacity: 0.85;
-    }
-
-    .closing .eyebrow { color: #cdd9cf; }
-
-    .closing h2 {
-      margin-bottom: 22px;
+    .manual h2 {
+      margin: 0 0 4px;
+      color: var(--indigo);
       font-family: "Songti TC", "Noto Serif TC", serif;
-      font-size: clamp(40px, 5vw, 62px);
+      font-size: 19px;
       font-weight: 600;
     }
 
-    .closing p {
-      max-width: 720px;
-      margin: 0 auto 12px;
-      color: rgba(255,255,255,0.75);
+    .manual p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13.5px;
     }
 
-    .closing .button { margin-top: 24px; color: var(--indigo); background: #fff; }
+    .manual-button {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 10px 20px;
+      border-radius: 12px;
+      background: var(--indigo);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity 160ms ease;
+    }
+    .manual-button:hover { opacity: 0.88; }
 
-    footer {
-      padding: 34px 20px 38px;
-      color: var(--muted);
-      background: #1f3038;
-      font-size: 13px;
+    /* ---------- Closing ---------- */
+    .closing {
+      padding-block: 64px;
+      background: var(--indigo);
+      color: #fff;
       text-align: center;
     }
 
-    .footer-academy {
-      margin-bottom: 5px;
-      color: rgba(255, 255, 255, 0.82);
-      font-weight: 650;
-      letter-spacing: 0.04em;
+    .closing h2 {
+      margin: 0 0 18px;
+      font-family: "Songti TC", "Noto Serif TC", serif;
+      font-size: clamp(22px, 4vw, 28px);
+      font-weight: 600;
+      line-height: 1.5;
     }
 
-    .footer-course {
-      margin-bottom: 14px;
-      color: rgba(255, 255, 255, 0.5);
+    .closing p {
+      max-width: 540px;
+      margin: 0 auto 10px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 14px;
+      text-wrap: balance;
     }
 
-    .copyright {
-      margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.62);
+    footer {
+      padding: 30px 20px 36px;
+      background: #1f3038;
+      font-size: 12.5px;
+      text-align: center;
     }
 
-    @media (max-width: 960px) {
-      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 70px; }
-      .quick-grid { grid-template-columns: repeat(2, 1fr); }
-      .week-layout { grid-template-columns: 1fr; }
-      .week-intro { position: static; }
-      .reminder-grid { grid-template-columns: 1fr; }
+    .footer-logo { width: 42px; height: auto; margin-bottom: 10px; opacity: 0.85; }
+    .footer-academy { margin-bottom: 3px; color: rgba(255, 255, 255, 0.82); font-weight: 650; letter-spacing: 0.04em; }
+    .copyright { margin: 10px 0 0; color: rgba(255, 255, 255, 0.55); }
+
+    /* ---------- Browse section heading ---------- */
+    .browse-heading {
+      margin-bottom: 26px;
+      text-align: center;
     }
 
-    @media (max-width: 720px) {
-      html { scroll-padding-top: 100px; }
-      body { font-size: 15px; line-height: 1.8; }
-      .container { width: min(calc(100% - 22px), var(--content)); }
-      .nav {
-        width: min(calc(100% - 20px), var(--content));
-        flex-wrap: wrap;
-        gap: 5px 12px;
-        padding-block: 6px;
-      }
-      .brand-logo { width: 122.5px; }
-      .hero-botanical { right: -92px; opacity: 0.15; }
-      .hero-sparkle { display: none; }
-      .nav-links {
-        width: 100%;
-        justify-content: space-between;
-        gap: 0;
-        padding-top: 3px;
-        border-top: 1px solid rgba(255, 250, 240, 0.2);
-      }
-      .nav-links a {
-        flex: 1 1 0;
-        padding: 5px 4px;
-        font-size: 12px;
-        text-align: center;
-      }
+    .browse-heading .eyebrow {
+      margin: 0 0 8px;
+      color: var(--sage-deep);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-indent: 0.22em;
+    }
 
-      .hero { padding-block: 46px 54px; }
-      .hero .eyebrow { margin-bottom: 12px; font-size: 11px; }
-      h1 { margin-bottom: 19px; font-size: 39px; line-height: 1.14; }
-      h1 span { margin-top: 9px; font-size: 16px; }
-      .hero-copy { font-size: 15px; line-height: 1.85; }
-      .hero-copy p { margin-bottom: 7px; }
-      .hero-actions {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-        margin-top: 25px;
-      }
-      .hero-actions .button {
-        width: 100%;
-        min-height: 46px;
-        padding: 9px 10px;
-        font-size: 13px;
-      }
-      .hero-actions .button:nth-child(3) { grid-column: 1 / -1; }
+    .browse-heading h2 {
+      margin: 0 0 8px;
+      color: var(--indigo);
+      font-family: "Songti TC", "Noto Serif TC", "PMingLiU", serif;
+      font-size: clamp(24px, 4vw, 30px);
+      font-weight: 600;
+    }
 
-      .button { font-size: 13px; }
-      .section, .week-section { padding-block: 56px; }
-      .section-heading { margin-bottom: 26px; }
-      .section-heading h2,
-      .week-intro h2 { margin-bottom: 12px; font-size: 27px; }
-      .section-heading p,
-      .week-intro > p { font-size: 14px; line-height: 1.8; }
-      .manual-card { grid-template-columns: 1fr; }
-      .manual-symbol { display: none; }
-      .quick-grid { grid-template-columns: 1fr; gap: 12px; }
-      .quick-card { min-height: auto; padding: 18px; }
-      .quick-card h3 { margin-bottom: 5px; font-size: 18px; }
-      .quick-card p { font-size: 13.5px; line-height: 1.75; }
-      .quick-time { margin-bottom: 14px; }
+    .browse-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-      .overview { border-radius: 18px; }
-      .overview-group-title { padding: 9px 14px 9px 12px; font-size: 14px; }
-      .overview-row {
-        grid-template-columns: minmax(0, 1fr) auto;
-        grid-template-areas:
-          "copy time"
-          "button button";
-        gap: 10px 11px;
-        min-height: 0;
-        padding: 14px;
-      }
-      .overview-copy { grid-area: copy; }
-      .overview-name { font-size: 14px; line-height: 1.5; }
-      .overview-time { grid-area: time; align-self: start; font-size: 12px; }
-      .overview-intro {
+    .hero-divider {
+      width: 100%;
+      height: 1px;
+      margin-top: 34px;
+      background: var(--line);
+    }
+
+    /* ---------- Colored bands ---------- */
+    .band { padding-block: 54px; }
+    .band > .container { padding-bottom: 0; }
+    .band-quick { background: #e7ede6; }
+    .band-weeks { background: var(--paper); }
+
+    /* ---------- Quick browse (by time / function) ---------- */
+    .quick-browse { padding-bottom: 0; }
+
+    .qb-group + .qb-group { margin-top: 30px; }
+
+    .qb-head {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 13px;
+      padding-left: 2px;
+    }
+
+    .qb-head h3 {
+      margin: 0;
+      color: var(--indigo);
+      font-family: "Songti TC", "Noto Serif TC", "PMingLiU", serif;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .qb-range {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 11px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--sage-deep);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    /* ---------- Mobile ---------- */
+    @media (max-width: 600px) {
+      html { scroll-padding-top: 68px; }
+      .container { width: min(calc(100% - 28px), 680px); }
+      .nav { min-height: 54px; }
+      .brand-logo { width: 118px; }
+
+      .hero { padding-block: 40px 30px; }
+      .hero .lead { font-size: 14px; }
+
+      .week-jump { gap: 7px; margin-top: 22px; }
+      .week-jump a { min-height: 36px; padding: 5px 13px; font-size: 12.5px; }
+
+      .browse-heading { margin-bottom: 22px; }
+      .browse-heading p { font-size: 13px; }
+      .band { padding-block: 40px; }
+      .hero-divider { margin-top: 26px; }
+      .qb-group + .qb-group { margin-top: 26px; }
+      .qb-head h3 { font-size: 16.5px; }
+
+      .week-block { margin-bottom: 34px; }
+      .track { gap: 13px; padding: 14px; min-height: 68px; }
+      .play-icon { width: 36px; height: 36px; }
+      .track-name { font-size: 14.5px; }
+      .track-intro {
         display: -webkit-box;
         overflow: hidden;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         font-size: 12.5px;
-        line-height: 1.65;
       }
-      .overview-row .button {
-        grid-area: button;
-        width: 100%;
-        min-height: 43px;
-        font-size: 13px;
-      }
+      .track-time { font-size: 12px; }
 
-      .week-layout { gap: 32px; }
-      .focus-box { margin-top: 20px; padding: 15px; }
-      .focus-box h3 { font-size: 15px; }
-      .focus-box ul { font-size: 13px; line-height: 1.8; }
-      .audio-list { gap: 14px; }
-      .audio-card { padding: 17px; border-radius: 18px; }
-      .audio-topline {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 10px;
-        margin-bottom: 14px;
-      }
-      .audio-kicker { margin-bottom: 3px; }
-      .audio-card h3 { font-size: 19px; line-height: 1.45; }
-      .time-chip { margin-top: 0; padding: 4px 8px; font-size: 11px; }
-      .audio-description { font-size: 13.5px; line-height: 1.8; }
-      .audio-card.is-collapsible:not(.is-expanded) .suitable,
-      .audio-card.is-collapsible:not(.is-expanded) blockquote { display: none; }
-      .audio-card.is-collapsible:not(.is-expanded) .audio-description {
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-      }
-      .audio-card.is-expanded .suitable { margin-bottom: 15px; font-size: 13.5px; line-height: 1.8; }
-      .audio-card.is-expanded blockquote { margin: 16px 0; padding: 14px 15px; font-size: 13.5px; line-height: 1.8; }
-      .mobile-detail-toggle {
-        display: inline-flex;
-        min-height: 38px;
-        align-items: center;
-        margin-top: 7px;
-        padding: 7px 0;
-        border: 0;
-        color: var(--indigo);
-        background: transparent;
-        font: inherit;
-        font-size: 12.5px;
-        font-weight: 700;
-        cursor: pointer;
-      }
-      .audio-card .card-actions { margin-top: 13px; }
-      .audio-card .card-actions .button { width: 100%; min-height: 45px; font-size: 13px; }
+      .manual-section { padding-block: 36px 44px; }
+      .section-divider { margin-bottom: 32px; }
+      .manual { flex-direction: column; align-items: flex-start; padding: 20px; }
+      .manual-button { width: 100%; justify-content: center; }
 
-      .manual-card { padding: 22px 18px; border-radius: 18px; }
-      .manual-card h2 { font-size: 25px; }
-      .manual-card p { font-size: 13.5px; line-height: 1.8; }
-      .closing { padding-block: 72px; }
-      .closing h2 { font-size: 29px; }
-      .closing p { font-size: 13.5px; line-height: 1.8; }
+      .closing { padding-block: 52px; }
+      .closing p { font-size: 13.5px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
     }
   </style>
 </head>
@@ -918,476 +484,306 @@
       <a class="brand" href="#top" aria-label="內在轉化教練學苑｜回到頁首">
         <img class="brand-logo" src="data:image/png;base64,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" alt="內在轉化教練學苑 Turn Within Coaching Academy">
       </a>
-      <div class="nav-links">
-        <a href="#quick">音檔快速瀏覽</a>
-        <a href="#weeks">每週導航</a>
-        <a class="pending-link" href="" data-link-key="learning-manual" aria-disabled="true">學習手冊</a>
-      </div>
+      <a class="nav-manual pending-link" href="" data-link-key="learning-manual" aria-disabled="true">學習手冊</a>
     </nav>
   </header>
 
   <main id="main">
     <section class="container hero" id="top">
-      <div class="flow-line flow-line-one" aria-hidden="true"></div>
-      <div class="flow-line flow-line-two" aria-hidden="true"></div>
-      <div class="botanical hero-botanical" aria-hidden="true">
-        <span class="stem"></span>
-        <span class="leaf"></span><span class="leaf"></span><span class="leaf"></span>
-        <span class="leaf"></span><span class="leaf"></span><span class="leaf"></span>
+      <h1>正念認知生活</h1>
+      <p class="subtitle">音檔練習入口</p>
+      <p class="lead">讓注意力從忙碌的頭腦，回到呼吸、身體，以及正在發生的這一刻。<br>不需要做到完美，只需一次次的回到覺察就好。</p>
+      <ul class="week-jump" aria-label="快速前往">
+        <li><a href="#quick">依需求瀏覽</a></li>
+        <li><a href="#weeks">依週次瀏覽</a></li>
+      </ul>
+      <div class="hero-divider" aria-hidden="true"></div>
+    </section>
+
+    <section class="band band-quick" id="quick" aria-labelledby="quick-title">
+     <div class="container quick-browse">
+      <div class="browse-heading">
+        <p class="eyebrow">QUICK ACCESS</p>
+        <h2 id="quick-title">快速瀏覽</h2>
+        <p>依練習長度與情境，找到此刻最適合的一段。</p>
       </div>
-      <div class="sparkle hero-sparkle" aria-hidden="true"></div>
-      <div>
-        <p class="eyebrow">Mindfulness Practice</p>
-        <h1>正念認知生活<span>音檔練習入口</span></h1>
-        <div class="hero-copy">
-          <p>讓注意力從忙碌的頭腦，回到呼吸、身體，以及正在發生的這一刻。</p>
-          <p>不需要做到完美，只需一次次的回到覺察就好</p>
+
+      <div class="qb-group">
+        <div class="qb-head">
+          <h3>短修習</h3>
+          <span class="qb-range">15 分鐘內</span>
         </div>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#quick">快速瀏覽音檔</a>
-          <a class="button button-secondary" href="#weeks">查看每週導航</a>
-          <a class="button button-secondary pending-link" href="" data-link-key="learning-manual" aria-disabled="true">瀏覽學習手冊</a>
+        <div class="track-list">
+          <a class="track pending-link" href="" data-link-key="three-step-breathing-space" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">三步驟呼吸空間</span>
+              <span class="track-intro">用三個步驟，快速轉換、回到當下。</span>
+            </span>
+            <span class="track-time">3 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="sitting-breath" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">靜坐觀呼吸練習</span>
+              <span class="track-intro">把心安放在呼吸上，分心時再溫柔回來。</span>
+            </span>
+            <span class="track-time">9 分鐘</span>
+          </a>
         </div>
+      </div>
+
+      <div class="qb-group">
+        <div class="qb-head">
+          <h3>長修習</h3>
+          <span class="qb-range">15–40 分鐘</span>
+        </div>
+                <div class="track-list">
+          <a class="track pending-link" href="" data-link-key="sitting-breath-body" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">靜坐觀呼吸身體</span>
+              <span class="track-intro">從呼吸擴展到全身，看見心散亂了，再溫柔帶回。</span>
+            </span>
+            <span class="track-time">18 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="body-scan-1" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">身體掃描練習</span>
+              <span class="track-intro">從思考回到感知，聽見身體此刻的訊息。</span>
+            </span>
+            <span class="track-time">31 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="body-scan-2" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">身體掃描練習二</span>
+              <span class="track-intro">延續身體覺察，友善看見身心每一刻的變化。</span>
+            </span>
+            <span class="track-time">29 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="open-awareness-long-sit" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">無揀擇覺察－長靜坐</span>
+              <span class="track-intro">敞開接收聲音、念頭與身體經驗，不刻意挑選。</span>
+            </span>
+            <span class="track-time">30 分鐘</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="qb-group">
+        <div class="qb-head">
+          <h3>依情境</h3>
+          <span class="qb-range">依當下需要</span>
+        </div>
+                <div class="track-list">
+          <a class="track pending-link" href="" data-link-key="three-finger-gratitude" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">三指感謝練習</span>
+              <span class="track-intro">停一下，記得那些值得感謝與欣賞的事。</span>
+            </span>
+            <span class="track-time">7 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="standing-stretch" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">站立伸展及呼吸</span>
+              <span class="track-intro">在緩慢伸展中，找到動態的安定。</span>
+            </span>
+            <span class="track-time">23 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="three-step-breathing-space-guided" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">三步驟呼吸空間（額外引導版）</span>
+              <span class="track-intro">壓力升高時，用命名與標記先支持自己。</span>
+            </span>
+            <span class="track-time">9 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="difficulties-practice" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">與困難共處</span>
+              <span class="track-intro">以容許、好奇與友善，靠近困難一點。</span>
+            </span>
+            <span class="track-time">26 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="loving-kindness-practice" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">友善修習</span>
+              <span class="track-intro">讓祝願流向他人與自己，培養友善的品質。</span>
+            </span>
+            <span class="track-time">14 分鐘</span>
+          </a>
+        </div>
+      </div>
+     </div>
+    </section>
+
+    <section class="band band-weeks" id="weeks" aria-labelledby="weeks-title">
+     <div class="container playlist">
+      <div class="browse-heading">
+        <p class="eyebrow">BY WEEK</p>
+        <h2 id="weeks-title">每週音檔</h2>
+        <p>跟著課程進度，回到每一週的主題複習。</p>
+      </div>
+
+      <div class="week-block" id="week-1">
+        <div class="week-head">
+          <span class="week-num">第 1 週</span>
+          <h2>從自動導航中覺醒</h2>
+        </div>
+        <div class="track-list">
+          <a class="track pending-link" href="" data-link-key="three-finger-gratitude" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">三指感謝練習</span>
+              <span class="track-intro">停一下，記得那些值得感謝與欣賞的事。</span>
+            </span>
+            <span class="track-time">7 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="body-scan-1" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">身體掃描練習</span>
+              <span class="track-intro">從思考回到感知，聽見身體此刻的訊息。</span>
+            </span>
+            <span class="track-time">31 分鐘</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="week-block" id="week-2">
+        <div class="week-head">
+          <span class="week-num">第 2 週</span>
+          <h2>另一種存在方式：身心同在</h2>
+        </div>
+        <div class="track-list">
+          <a class="track pending-link" href="" data-link-key="body-scan-2" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">身體掃描練習二</span>
+              <span class="track-intro">延續身體覺察，友善看見身心每一刻的變化。</span>
+            </span>
+            <span class="track-time">29 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="sitting-breath" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">靜坐觀呼吸練習</span>
+              <span class="track-intro">把心安放在呼吸上，分心時再溫柔回來。</span>
+            </span>
+            <span class="track-time">9 分鐘</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="week-block" id="week-3">
+        <div class="week-head">
+          <span class="week-num">第 3 週</span>
+          <h2>匯聚散亂的心</h2>
+        </div>
+        <div class="track-list">
+          <a class="track pending-link" href="" data-link-key="three-step-breathing-space" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">三步驟呼吸空間</span>
+              <span class="track-intro">用三個步驟，快速轉換、回到當下。</span>
+            </span>
+            <span class="track-time">3 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="standing-stretch" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">站立伸展及呼吸</span>
+              <span class="track-intro">在緩慢伸展中，找到動態的安定。</span>
+            </span>
+            <span class="track-time">23 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="sitting-breath-body" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">靜坐觀呼吸身體</span>
+              <span class="track-intro">從呼吸擴展到全身，看見心散亂了，再溫柔帶回。</span>
+            </span>
+            <span class="track-time">18 分鐘</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="week-block" id="week-4">
+        <div class="week-head">
+          <span class="week-num">第 4 週</span>
+          <h2>識別反應性</h2>
+        </div>
+        <div class="track-list">
+          <a class="track pending-link" href="" data-link-key="open-awareness-long-sit" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">無揀擇覺察－長靜坐</span>
+              <span class="track-intro">敞開接收聲音、念頭與身體經驗，不刻意挑選。</span>
+            </span>
+            <span class="track-time">30 分鐘</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="week-block" id="week-5">
+        <div class="week-head">
+          <span class="week-num">第 5 週</span>
+          <h2>容許並如其所是</h2>
+        </div>
+        <div class="track-list">
+          <a class="track pending-link" href="" data-link-key="difficulties-practice" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">與困難共處</span>
+              <span class="track-intro">以容許、好奇與友善，靠近困難一點。</span>
+            </span>
+            <span class="track-time">26 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="three-step-breathing-space-guided" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">三步驟呼吸空間（額外引導版）</span>
+              <span class="track-intro">壓力升高時，用命名與標記先支持自己。</span>
+            </span>
+            <span class="track-time">9 分鐘</span>
+          </a>
+          <a class="track pending-link" href="" data-link-key="loving-kindness-practice" aria-disabled="true">
+            <span class="play-icon" aria-hidden="true"><svg width="13" height="14" viewBox="0 0 13 14" fill="currentColor"><path d="M1 1.6c0-.8.9-1.3 1.6-.9l9 5.4c.7.4.7 1.4 0 1.8l-9 5.4c-.7.4-1.6-.1-1.6-.9V1.6z"/></svg></span>
+            <span class="track-copy">
+              <span class="track-name">友善修習</span>
+              <span class="track-intro">讓祝願流向他人與自己，培養友善的品質。</span>
+            </span>
+            <span class="track-time">14 分鐘</span>
+          </a>
+        </div>
+      </div>
+     </div>
+    </section>
+
+    <section class="container manual-section" aria-labelledby="manual-title">
+      <div class="section-divider" aria-hidden="true"></div>
+      <div class="manual">
+        <div>
+          <h2 id="manual-title">學習手冊</h2>
+          <p>每週主題、課程觀念與居家修習說明，都整理在這裡。</p>
+        </div>
+        <a class="manual-button pending-link" href="" data-link-key="learning-manual" aria-disabled="true">開啟學習手冊</a>
       </div>
     </section>
 
-    <section class="section section-soft" id="quick" aria-labelledby="overview-title">
+    <section class="closing" aria-labelledby="closing-title">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Quick access</p>
-          <h2 id="overview-title">音檔快速瀏覽</h2>
-          <p>可以先從練習名稱與時間找到今天想做的練習。</p>
-        </div>
-        <div class="overview">
-          <section class="overview-group overview-group-short" aria-labelledby="short-practice-title">
-            <div class="overview-group-title" id="short-practice-title">短修習 <span>15 分鐘內</span></div>
-            <div class="overview-row">
-              <span class="overview-copy"><span class="overview-name">三步驟呼吸空間</span><span class="overview-intro">用三個步驟，幫助自己快速轉換、回到當下。</span></span>
-              <span class="overview-time">約 3 分鐘</span>
-              <a class="button button-secondary pending-link" href="" data-link-key="three-step-breathing-space" aria-disabled="true">播放音檔</a>
-            </div>
-            <div class="overview-row">
-              <span class="overview-copy"><span class="overview-name">靜坐觀呼吸練習</span><span class="overview-intro">把心安放在呼吸上，分心時再溫柔回來。</span></span>
-              <span class="overview-time">約 9 分鐘</span>
-              <a class="button button-secondary pending-link" href="" data-link-key="sitting-breath" aria-disabled="true">播放音檔</a>
-            </div>
-          </section>
-
-          <section class="overview-group overview-group-long" aria-labelledby="long-practice-title">
-            <div class="overview-group-title" id="long-practice-title">長修習 <span>15–40 分鐘</span></div>
-            <div class="overview-row">
-              <span class="overview-copy"><span class="overview-name">靜坐觀呼吸身體</span><span class="overview-intro">從呼吸擴展到全身，培養看見心散亂的覺知。</span></span>
-              <span class="overview-time">約 18 分鐘</span>
-              <a class="button button-secondary pending-link" href="" data-link-key="sitting-breath-body" aria-disabled="true">播放音檔</a>
-            </div>
-            <div class="overview-row">
-              <span class="overview-copy"><span class="overview-name">身體掃描練習</span><span class="overview-intro">從思考回到感知，逐步聽見身體此刻的訊息。</span></span>
-              <span class="overview-time">約 31 分鐘</span>
-              <a class="button button-secondary pending-link" href="" data-link-key="body-scan-1" aria-disabled="true">播放音檔</a>
-            </div>
-            <div class="overview-row">
-              <span class="overview-copy"><span class="overview-name">身體掃描練習二</span><span class="overview-intro">延續身體覺察，友善看見身心每一刻的變化。</span></span>
-              <span class="overview-time">約 29 分鐘</span>
-              <a class="button button-secondary pending-link" href="" data-link-key="body-scan-2" aria-disabled="true">播放音檔</a>
-            </div>
-            <div class="overview-row">
-              <span class="overview-copy"><span class="overview-name">無揀擇覺察－長靜坐</span><span class="overview-intro">敞開接收聲音、念頭與身體經驗，不刻意挑選。</span></span>
-              <span class="overview-time">約 30 分鐘</span>
-              <a class="button button-secondary pending-link" href="" data-link-key="open-awareness-long-sit" aria-disabled="true">播放音檔</a>
-            </div>
-          </section>
-
-          <section class="overview-group overview-group-special" aria-labelledby="special-practice-title">
-            <div class="overview-group-title" id="special-practice-title">特殊情境 <span>依當下需要選擇</span></div>
-            <div class="overview-row">
-              <span class="overview-copy"><span class="overview-name">三指感謝練習</span><span class="overview-intro">在日常裡停一下，記得那些值得感謝與欣賞的事。</span></span>
-              <span class="overview-time">約 7 分鐘</span>
-              <a class="button button-secondary pending-link" href="" data-link-key="three-finger-gratitude" aria-disabled="true">播放音檔</a>
-            </div>
-            <div class="overview-row">
-              <span class="overview-copy"><span class="overview-name">站立伸展及呼吸</span><span class="overview-intro">在緩慢伸展中，探索身體的界線與動態安定。</span></span>
-              <span class="overview-time">約 23 分鐘</span>
-              <a class="button button-secondary pending-link" href="" data-link-key="standing-stretch" aria-disabled="true">播放音檔</a>
-            </div>
-            <div class="overview-row">
-              <span class="overview-copy"><span class="overview-name">三步驟呼吸空間（額外引導版）</span><span class="overview-intro">在壓力升高、持續失衡或遇到困難時，以命名與標記先支持自己。</span></span>
-              <span class="overview-time">約 9 分鐘</span>
-              <a class="button button-secondary pending-link" href="" data-link-key="three-step-breathing-space-guided" aria-disabled="true">播放音檔</a>
-            </div>
-            <div class="overview-row">
-              <span class="overview-copy"><span class="overview-name">與困難共處</span><span class="overview-intro">在可承受的範圍內，以容許、好奇與友善靠近困難。</span></span>
-              <span class="overview-time">約 26 分鐘</span>
-              <a class="button button-secondary pending-link" href="" data-link-key="difficulties-practice" aria-disabled="true">播放音檔</a>
-            </div>
-            <div class="overview-row">
-              <span class="overview-copy"><span class="overview-name">友善修習</span><span class="overview-intro">讓祝願流向他人與自己，培養能調和排斥的友善品質。</span></span>
-              <span class="overview-time">約 14 分鐘</span>
-              <a class="button button-secondary pending-link" href="" data-link-key="loving-kindness-practice" aria-disabled="true">播放音檔</a>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="weeks" aria-labelledby="weeks-title">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Explore by week</p>
-          <h2 id="weeks-title">每週導航</h2>
-          <p>課程共有八週，目前先整理到第五週。你可以依照進度回到每週主題，也可以直接前往此刻最想複習的一週。</p>
-        </div>
-        <div class="quick-grid week-nav-grid">
-          <article class="quick-card">
-            <span class="quick-time">第一週</span>
-            <h3>從自動導航中覺醒</h3>
-            <p>從日常感官與身體開始，讓被忽略的經驗慢慢變清楚。</p>
-            <a class="button" href="#week-1">前往第一週</a>
-          </article>
-          <article class="quick-card">
-            <span class="quick-time">第二週</span>
-            <h3>另一種存在方式：身心同在</h3>
-            <p>透過呼吸與身體感覺，把自己定錨在正在發生的這一刻。</p>
-            <a class="button" href="#week-2">前往第二週</a>
-          </article>
-          <article class="quick-card">
-            <span class="quick-time">第三週</span>
-            <h3>匯聚散亂的心</h3>
-            <p>讓呼吸與身體成為安住之所，也讓注意力有一條回來的路。</p>
-            <a class="button" href="#week-3">前往第三週</a>
-          </article>
-          <article class="quick-card">
-            <span class="quick-time">第四週</span>
-            <h3>識別反應性</h3>
-            <p>認出反應正在發生，讓刺激與回應之間多一點選擇空間。</p>
-            <a class="button" href="#week-4">前往第四週</a>
-          </article>
-          <article class="quick-card">
-            <span class="quick-time">第五週</span>
-            <h3>容許並如其所是</h3>
-            <p>把困難放進覺知裡，以容許、好奇與友善靠近一點。</p>
-            <a class="button" href="#week-5">前往第五週</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="week-section week-1" id="week-1" aria-labelledby="week-1-title">
-      <div class="container week-layout">
-        <div class="week-intro">
-          <span class="week-label">第一週</span>
-          <h2 id="week-1-title">從自動導航中覺醒</h2>
-          <p>我們很容易一邊生活，一邊被思緒帶走：吃飯時想著工作，走路時趕著下一件事，身體明明很累，頭腦卻沒有發現。</p>
-          <p>第一週從日常感官與身體開始，練習踏出自動導航。當我們願意把注意力帶回正在發生的經驗，平常被忽略的細節，也會一點一點變得清楚。</p>
-          <div class="focus-box">
-            <h3>本週練習重點</h3>
-            <ul>
-              <li>透過身體掃描，重新連結身體各部位的感覺。</li>
-              <li>用感謝練習，留意生活中容易被視為理所當然的美好。</li>
-              <li>不批判此刻的經驗，不急著要求自己一定要有感覺。</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="audio-list">
-          <article class="audio-card">
-            <div class="audio-topline">
-              <div>
-                <p class="audio-kicker">音檔 01</p>
-                <h3>三指感謝練習</h3>
-              </div>
-              <span class="time-chip">約 7 分鐘</span>
-            </div>
-            <p class="suitable"><strong>適合時機：</strong>一天開始前、睡前，或想讓自己停下來回望生活時。</p>
-            <blockquote>「刻意地、有意識地，每一天好好品味那些值得欣賞、感謝的東西，讓它們留下來。」</blockquote>
-            <p class="audio-description">透過手指作為提醒，想起此刻值得感謝與欣賞的人、事、物。練習不只是在腦中列出答案，也邀請自己停留一下，感受感謝在身體裡帶來的細微變化。課堂先做簡單的三指版，回家之後也可以依自己的狀態做五指或十指。</p>
-            <div class="card-actions">
-              <!-- LINK: three-finger-gratitude -->
-              <a class="button button-primary button-audio pending-link" href="" data-link-key="three-finger-gratitude" aria-disabled="true">播放三指感謝練習</a>
-            </div>
-          </article>
-
-          <article class="audio-card">
-            <div class="audio-topline">
-              <div>
-                <p class="audio-kicker">音檔 02</p>
-                <h3>身體掃描練習</h3>
-              </div>
-              <span class="time-chip">約 31 分鐘</span>
-            </div>
-            <p class="suitable"><strong>適合時機：</strong>能留出一段完整、不容易被打擾的時間時；也可以安排在睡前或一天開始前。</p>
-            <blockquote>「身體掃描的意圖之一，是讓我們暫時離開用思考經驗世界的模式，回到感知。身體一直都在此時此地，像一座港灣，讓漂進回憶、擔心或期待裡的心，重新找到可以停泊的地方。」</blockquote>
-            <p class="audio-description">跟著引導，依序把注意力帶到身體不同部位，留意觸感、溫度、緊繃、放鬆，或此刻沒有明顯感覺的地方。如實知道：此刻的身體正在經歷什麼。</p>
-            <div class="card-actions">
-              <!-- LINK: body-scan-1 -->
-              <a class="button button-primary button-audio pending-link" href="" data-link-key="body-scan-1" aria-disabled="true">播放身體掃描練習</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="week-section week-2" id="week-2" aria-labelledby="week-2-title">
-      <div class="container week-layout">
-        <div class="week-intro">
-          <span class="week-label">第二週</span>
-          <h2 id="week-2-title">另一種存在方式：身心同在</h2>
-          <p>當我們長時間活在頭腦裡，很容易把想法當成全部的經驗。第二週練習透過呼吸與身體感覺，把自己定錨在當下，從間接的思考，回到身體正在經驗的這一刻。</p>
-          <p>這一週也開始留意：同一件事，可能因為不同的詮釋，帶來不同的情緒、身體感覺與行動衝動。</p>
-          <div class="focus-box">
-            <h3>本週練習重點</h3>
-            <ul>
-              <li>以呼吸、腳底、坐姿或雙手的感覺作為定錨點。</li>
-              <li>當注意力被想法帶走時，練習一次次回到身體。</li>
-              <li>在聆聽與說話時，保留一部分注意力感受自己。</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="audio-list">
-          <article class="audio-card">
-            <div class="audio-topline">
-              <div>
-                <p class="audio-kicker">音檔 01</p>
-                <h3>身體掃描練習二</h3>
-              </div>
-              <span class="time-chip">約 29 分鐘</span>
-            </div>
-            <p class="suitable"><strong>適合時機：</strong>想延續第一週身體掃描，或感覺自己一直在頭腦裡打轉時。</p>
-            <blockquote>「身體掃描的意圖，並不是要達到完全的專注、放鬆或平靜。很單純地觀察每一個當下，身心正在發生什麼，直接經驗『身心同在』的模式。連想要把它做好的反應，也可能是練習帶來的珍貴看見。」</blockquote>
-            <p class="audio-description">延續身體掃描的修習，帶著好奇與友善，逐步覺察身體不同區域。當分心、想睡或沒有感覺時，不需要評分，只要留意到，再回到引導與身體。</p>
-            <div class="card-actions">
-              <!-- LINK: body-scan-2 -->
-              <a class="button button-primary button-audio pending-link" href="" data-link-key="body-scan-2" aria-disabled="true">播放身體掃描練習二</a>
-            </div>
-          </article>
-
-          <article class="audio-card">
-            <div class="audio-topline">
-              <div>
-                <p class="audio-kicker">音檔 02</p>
-                <h3>靜坐觀呼吸練習</h3>
-              </div>
-              <span class="time-chip">約 9 分鐘</span>
-            </div>
-            <p class="suitable"><strong>適合時機：</strong>工作前、午休、轉換任務時，或想用一段較短的靜坐安頓自己時。</p>
-            <blockquote>「把心安放在一個點上面，把心安放在呼吸的感覺上。辨識分心、溫柔回來，也留意自己的心總是喜歡飄去哪裡。」</blockquote>
-            <p class="audio-description">找到舒服而穩定的坐姿，把注意力帶到呼吸最容易被感覺到的位置。感受每一次吸氣與呼氣的變化；發現心飄走時，再溫柔地回來。</p>
-            <div class="card-actions">
-              <!-- LINK: sitting-breath -->
-              <a class="button button-primary button-audio pending-link" href="" data-link-key="sitting-breath" aria-disabled="true">播放靜坐觀呼吸練習</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="week-section week-3" id="week-3" aria-labelledby="week-3-title">
-      <div class="container week-layout">
-        <div class="week-intro">
-          <span class="week-label">第三週</span>
-          <h2 id="week-3-title">匯聚散亂的心</h2>
-          <p>心常常在背景忙著解決問題、回顧過去、計畫未來。忙碌本身沒有錯，只是當我們長時間停留在行動模式裡，注意力可能變得散亂，也更容易迷失在想法之中。</p>
-          <p>第三週練習在靜態與動態中，以呼吸和身體作為安住之所。不是逼自己停止思考，而是讓散開的注意力，有一條回來的路。</p>
-          <div class="focus-box">
-            <h3>本週練習重點</h3>
-            <ul>
-              <li>認識三步驟呼吸空間：覺察、聚焦、擴展。</li>
-              <li>在站立與伸展中，探索動態身體如何支持安定。</li>
-              <li>以呼吸為錨，再將覺察擴展到整個身體。</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="audio-list">
-          <article class="audio-card">
-            <div class="audio-topline">
-              <div>
-                <p class="audio-kicker">音檔 01</p>
-                <h3>三步驟呼吸空間</h3>
-              </div>
-              <span class="time-chip">約 3 分鐘</span>
-            </div>
-            <p class="suitable"><strong>適合時機：</strong>起床後、工作開始前、回到家時、睡前，幫助快速轉換回到當下。</p>
-            <blockquote>「它像一個任意門。透過覺察、集中、擴展三個步驟，散亂的頭腦與散亂的心，回到一個比較清澈、清明、清醒的狀態。」</blockquote>
-            <p class="audio-description">依序練習覺察、聚焦與擴展：看見此刻的身體、情緒與想法，回到呼吸，再把覺察擴展到整個身體。短短幾分鐘，重新與當下連接。</p>
-            <div class="card-actions">
-              <!-- LINK: three-step-breathing-space -->
-              <a class="button button-primary button-audio pending-link" href="" data-link-key="three-step-breathing-space" aria-disabled="true">播放三步驟呼吸空間</a>
-            </div>
-          </article>
-
-          <article class="audio-card">
-            <div class="audio-topline">
-              <div>
-                <p class="audio-kicker">音檔 02</p>
-                <h3>站立伸展及呼吸</h3>
-              </div>
-              <span class="time-chip">約 23 分鐘</span>
-            </div>
-            <p class="suitable"><strong>適合時機：</strong>久坐之後、靜坐容易昏沉時，或想透過動作回到身體時。</p>
-            <blockquote>「這個練習不是瑜伽課，大家量力而為就可以了。重要的意圖是『探索身體的邊界』，也探索『動態的身體如何支持新的安定』。」</blockquote>
-            <p class="audio-description">在緩慢的站立伸展中，把注意力帶到關節、肌肉、呼吸與身體的界線。依自己的狀態選擇動作幅度，在移動中找到新的安定。若有頸椎、背部或其他健康不適，請只做適合自己的動作；任何時候都可以減小幅度或停止。</p>
-            <div class="card-actions">
-              <!-- LINK: standing-stretch -->
-              <a class="button button-primary button-audio pending-link" href="" data-link-key="standing-stretch" aria-disabled="true">播放站立伸展及呼吸</a>
-            </div>
-          </article>
-
-          <article class="audio-card">
-            <div class="audio-topline">
-              <div>
-                <p class="audio-kicker">音檔 03</p>
-                <h3>靜坐觀呼吸身體</h3>
-              </div>
-              <span class="time-chip">約 18 分鐘</span>
-            </div>
-            <p class="suitable"><strong>適合時機：</strong>想安靜坐下來，從呼吸逐步擴展到全身時。</p>
-            <blockquote>「如果上次的靜坐觀呼吸是一個火車頭，這個練習有點像火車頭後面加一節。今天加上的這一節是身體。練習看見心散亂了，再溫柔地帶回來，持續培養這塊『後設覺知系統的肌肉』。」</blockquote>
-            <p class="audio-description">先在坐姿中安頓身體，以呼吸聚焦注意力，再把覺察擴展到整個身體。想法出現時不必跟著走，也不需要推開，只要一次次回到呼吸與身體。</p>
-            <div class="card-actions">
-              <!-- LINK: sitting-breath-body -->
-              <a class="button button-primary button-audio pending-link" href="" data-link-key="sitting-breath-body" aria-disabled="true">播放靜坐觀呼吸身體</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="week-section week-4" id="week-4" aria-labelledby="week-4-title">
-      <div class="container week-layout">
-        <div class="week-intro">
-          <span class="week-label">第四週</span>
-          <h2 id="week-4-title">識別反應性</h2>
-          <p>面對不舒服的感覺、情緒或情境，我們常會很快出現喜歡、不喜歡、抓住、推開或立刻做點什麼的反應。這些反應有保護我們的用意，有時也可能讓原本的困難繼續擴大。</p>
-          <p>第四週開始走進更深的身心探索。練習先認出反應正在發生，讓刺激與回應之間，多出一點可以看見與選擇的空間。</p>
-          <div class="focus-box">
-            <h3>本週練習重點</h3>
-            <ul>
-              <li>留意身體的緊繃、不適，以及想移動、抓住或推開的衝動。</li>
-              <li>觀察聲音、念頭與情緒的出現、變化和消失。</li>
-              <li>當經驗太強烈時，可以回到錨點或先停止練習。</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="audio-list">
-          <article class="audio-card">
-            <div class="audio-topline">
-              <div>
-                <p class="audio-kicker">音檔 01</p>
-                <h3>無揀擇覺察－長靜坐</h3>
-              </div>
-              <span class="time-chip">約 30 分鐘</span>
-            </div>
-            <p class="suitable"><strong>適合時機：</strong>有一段完整時間，並願意進行較深、較長的靜坐探索時。</p>
-            <blockquote>「從姿勢與呼吸開始，將覺察擴展到身體，再進入聲音與念頭；不刻意尋找或挑選某一種經驗，而是接收當下自然出現的經驗。」</blockquote>
-            <p class="audio-description">從坐姿與呼吸開始，把覺察逐步擴展到整個身體、聲音、念頭與情緒。練習留意喜歡、不喜歡，以及想立刻反應的衝動；如實觀察經驗的出現、停留、變化與離開。如果感受太強烈，可以帶著覺知調整姿勢，也可以回到呼吸或熟悉的身體錨點。你始終可以選擇先照顧自己。</p>
-            <div class="card-actions">
-              <!-- LINK: open-awareness-long-sit -->
-              <a class="button button-primary button-audio pending-link" href="" data-link-key="open-awareness-long-sit" aria-disabled="true">播放長靜坐</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="week-section week-5" id="week-5" aria-labelledby="week-5-title">
-      <div class="container week-layout">
-        <div class="week-intro">
-          <span class="week-label">第五週</span>
-          <h2 id="week-5-title">容許並如其所是</h2>
-          <p>遇到困難時，身心很快就會啟動熟悉的反應：緊縮、抗拒、逃開、急著解決，或反覆糾纏。這些反應帶著保護我們的用意；當它們一路接手，也可能讓原本的痛苦繼續延長。</p>
-          <p>第五週練習把困難放進更寬廣的覺知裡。先安頓自己，看見困難如何落在身體，再帶著容許、好奇與友善靠近一點。這份練習不要求你喜歡不舒服，也沒有要讓困難立刻消失。當排斥少了一些燃料，我們便多出一點空間，可以停一下，重新選擇此刻更有智慧的回應。</p>
-          <div class="focus-box">
-            <h3>本週練習重點</h3>
-            <ul>
-              <li>先回到呼吸或熟悉的身體錨點，確認自己有足夠的穩定與資源。</li>
-              <li>留意困難帶來的緊縮、排斥、不適，以及想逃開或立刻解決的衝動。</li>
-              <li>用命名、呼吸、容許與友善靠近困難；感受太強烈時，回到錨點或先停止。</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="audio-list">
-          <article class="audio-card">
-            <div class="audio-topline">
-              <div>
-                <p class="audio-kicker">音檔 01</p>
-                <h3>與困難共處</h3>
-              </div>
-              <span class="time-chip">約 26 分鐘</span>
-            </div>
-            <p class="suitable"><strong>適合時機：</strong>有一段完整時間，身心相對穩定，並願意探索一個輕度到中度的困難經驗時。</p>
-            <blockquote>「這個練習沒有一個『對的樣子』，沒有要讓自己變得喜歡它。它是一個邀請，嘗試跟困難建立一種新的關係：友善一點、歡迎一點、好奇一點、允許一點、平等一點。」</blockquote>
-            <p class="audio-description">先從姿勢、呼吸與身體安頓自己，再把一個輕度到中度的困難放到「新的工作臺」上，辨認相關的念頭、情緒與身體感覺。在可承受的範圍內靠近感受最明顯的部位，讓呼吸與覺知進出，也可以輕輕對自己說：「有這樣的感覺是可以的。不喜歡它沒有關係，它已經存在了。」如果感受變得太強烈，請回到呼吸或熟悉的身體錨點；任何時候都可以睜開眼睛、調整姿勢或停止練習。</p>
-            <div class="card-actions">
-              <!-- LINK: difficulties-practice -->
-              <a class="button button-primary button-audio pending-link" href="" data-link-key="difficulties-practice" aria-disabled="true">播放與困難共處</a>
-            </div>
-          </article>
-
-          <article class="audio-card">
-            <div class="audio-topline">
-              <div>
-                <p class="audio-kicker">音檔 02</p>
-                <h3>三步驟呼吸空間（額外引導版）</h3>
-              </div>
-              <span class="time-chip">約 9 分鐘</span>
-            </div>
-            <p class="suitable"><strong>適合時機：</strong>感到壓力升高、持續失衡或遇到困難時，當下沒有足夠時間進行長修習時。</p>
-            <blockquote>「在生活中遇到困難的情境，可能當下沒有二十五分鐘，或許只有五分鐘。這個練習可以當作支持自己的第一步，額外引導的地方就是命名跟標記。」</blockquote>
-            <p class="audio-description">延續覺察、集中、擴展三個步驟，這個版本加入了命名與標記。先辨認此刻正在發生什麼，例如「肩膀有緊繃感」、「自我批評的想法出現了」、「這是焦慮」；再把注意力帶回呼吸或其他錨點，最後擴展到整個身體，以寬廣的覺知容許經驗如其所是。如果有支持，也可以將一隻手放在胸口，作為自我照顧的手勢。</p>
-            <div class="card-actions">
-              <!-- LINK: three-step-breathing-space-guided -->
-              <a class="button button-primary button-audio pending-link" href="" data-link-key="three-step-breathing-space-guided" aria-disabled="true">播放額外引導版</a>
-            </div>
-          </article>
-
-          <article class="audio-card">
-            <div class="audio-topline">
-              <div>
-                <p class="audio-kicker">音檔 03</p>
-                <h3>友善修習</h3>
-              </div>
-              <span class="time-chip">約 14 分鐘</span>
-            </div>
-            <p class="suitable"><strong>適合時機：</strong>發現自己容易煩躁、對人事物升起排斥，或想為身心培養多一點友善品質時。</p>
-            <blockquote>「當有一段時間，我發現自己每天看誰都不爽的時候，我就知道：或許我該花個十五分鐘，為自己慈心禪一下。」</blockquote>
-            <p class="audio-description">從一位讓自己感到友善溫暖的人或小動物開始，感受相關的身體感覺，再讓祝願依序流向正在經歷小困難的人、自己與身邊的人：「願內心感到平和自在，願健康平安，願善自珍重，好好照顧自己。」這些祝願可以替換成最能支持你的版本。練習的意圖，是培養一種能夠調和排斥與厭惡的友善品質，讓困難出現時，心裡多一個靠近、疼惜與好奇的選擇。</p>
-            <div class="card-actions">
-              <!-- LINK: loving-kindness-practice -->
-              <a class="button button-primary button-audio pending-link" href="" data-link-key="loving-kindness-practice" aria-disabled="true">播放友善修習</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="manual" aria-labelledby="manual-title">
-      <div class="container">
-        <article class="manual-card">
-          <div>
-            <p class="eyebrow">Learning guide</p>
-            <h2 id="manual-title">練習音檔之外，也可以回到學習手冊</h2>
-            <p>學習手冊整理了每週主題、課程觀念與家中修習說明。你可以在開始練習前先閱讀，也可以在練習之後回來翻看，讓音檔中的經驗與課程內容慢慢連結起來。</p>
-            <div class="card-actions">
-              <!-- LINK: learning-manual -->
-              <a class="button button-primary pending-link" href="" data-link-key="learning-manual" aria-disabled="true">開啟正念認知生活學習手冊</a>
-            </div>
-          </div>
-          <div class="manual-symbol" aria-hidden="true">念</div>
-        </article>
-      </div>
-    </section>
-
-    <section class="closing" id="reminder" aria-labelledby="closing-title">
-      <div class="container">
-        <p class="eyebrow">Before you begin</p>
-        <h2 id="closing-title">不需做到完美，只需一次次的回到覺察</h2>
-        <p>為自己找一個相對安穩、不容易被打擾的位置。你可以坐著、躺著，或依音檔提示站立練習。</p>
-        <p>練習時走神、分心或沒有特別感覺，都可能發生。當你發現注意力飄走了，那一刻已經是覺察；再把注意力輕輕帶回聲音、呼吸或身體就好。</p>
-        <p>任何時候，如果身體明顯不適或心裡承受不了，都可以調整姿勢、睜開眼睛或先停止。照顧當下的身心需要，是第一優先。</p>
-        <a class="button" href="#quick">回到音檔快速選擇</a>
+        <h2 id="closing-title">不需做到完美，只需一次次回到覺察</h2>
+        <p>找一個不容易被打擾的位置，坐著或躺著都可以。<br>走神了，發現的那一刻已經是覺察，輕輕回來就好。</p>
+        <p>任何時候身心承受不了，都可以調整姿勢或先停止。<br>照顧自己，永遠是第一優先。</p>
       </div>
     </section>
   </main>
@@ -1395,7 +791,6 @@
   <footer>
     <img class="footer-logo" src="data:image/png;base64,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" alt="內在轉化教練學苑 Logo">
     <div class="footer-academy">內在轉化教練學苑 · Turn Within Coaching Academy</div>
-    <div class="footer-course">正念認知生活課程 · 音檔練習入口</div>
     <p class="copyright">所有版權歸內在轉化教練學苑所有，請勿私下轉載或銷售。</p>
   </footer>
 
@@ -1426,29 +821,6 @@
       } else {
         link.addEventListener('click', (event) => event.preventDefault());
       }
-    });
-
-    document.querySelectorAll('.audio-card').forEach((card) => {
-      const actions = card.querySelector('.card-actions');
-      const title = card.querySelector('h3')?.textContent.trim() || '這個練習';
-      if (!actions) return;
-
-      const toggle = document.createElement('button');
-      toggle.type = 'button';
-      toggle.className = 'mobile-detail-toggle';
-      toggle.textContent = '＋ 查看完整介紹';
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', `查看${title}的完整介紹`);
-
-      card.classList.add('is-collapsible');
-      actions.before(toggle);
-
-      toggle.addEventListener('click', () => {
-        const expanded = card.classList.toggle('is-expanded');
-        toggle.textContent = expanded ? '－ 收起完整介紹' : '＋ 查看完整介紹';
-        toggle.setAttribute('aria-expanded', String(expanded));
-        toggle.setAttribute('aria-label', expanded ? `收起${title}的完整介紹` : `查看${title}的完整介紹`);
-      });
     });
   </script>
 </body>
